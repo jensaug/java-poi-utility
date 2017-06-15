@@ -1,0 +1,323 @@
+  {
+    "measurement": {
+      "name": "Primärvård 2015",
+      "grouping": "Primärvård",
+      "period": "2015"
+    },
+    "respondent": {
+      "id": "2",
+      "status": "answered online",
+      "metadata": {
+        "ageAtVisit": 3,
+        "gender": "male"
+      }
+    },
+    "questionnaire": {
+      "name": "Primärvård Läkarbesök vårdnadshavare inkl. förtroende 2.0",
+      "customCode": "PB15A1-VB2PV2XX0N0006"
+    },
+    "organisation": {
+      "dn": "ou=Nötkärnan Friskväderstorget VC BVC,ou=Nötkärnan AB,ou=Primärvård Privat,ou=Primärvård,o=Västra Götalandsregionen,st=Västra regionen,c=Sverige",
+      "hsaId": "SE2321000131-E000000007631"
+    },
+    "responses": [
+      {
+        "questionText": "Är du nöjd med de sätt du kan komma i kontakt med hälso-/vårdcentralen på (t ex 1177 Vårdguiden, telefon, e-tjänster, hemsida eller annat)?",
+        "choiceValue": "5",
+        "choiceAcceptable": true,        
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.506,
+        "questionDimension": "Tillgänglighet",
+        "customCode": "TBNVYA05YNNNC1N000026"
+      },
+      {
+        "questionText": "Fick barnet besöka hälso-/vårdcentralen inom rimlig tid?",
+        "choiceValue": "6",
+        "choiceText": "Ej aktuellt",
+        "questionWeight": 0.955,
+        "questionDimension": "Tillgänglighet",
+        "customCode": "TBNVYA05YNNNC1N000063"
+      },
+      {
+        "questionText": "Var det enkelt att ta sig till hälso-/vårdcentralen?",
+        "choiceValue": "3",
+        "questionWeight": 0.833,
+        "questionDimension": "Tillgänglighet",
+        "customCode": "TBNVYA05YNNNC1N000028"
+      },
+      {
+        "questionText": "Under besöket, informerade personalen dig om eventuella förseningar?",
+        "choiceValue": "2",
+        "questionWeight": 0.187,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBNVNA05YNNNC1N000029"
+      },
+      {
+        "questionText": "Får barnet träffa samma läkare vid sina besök på hälso-/vårdcentralen?",
+        "choiceValue": "5",
+        "choiceText": "Ja, alltid",
+        "questionWeight": 0.581,
+        "questionDimension": "Kontinuitet och koordinering",
+        "customCode": "KBYVYA05YNNNB1N000045"
+      },
+      {
+        "questionText": "Fick barnet träffa den läkare du ville att barnet skulle träffa?",
+        "choiceValue": "2",
+        "choiceText": "Nej",
+        "questionWeight": 0.075,
+        "questionDimension": "Kontinuitet och koordinering",
+        "customCode": "KBYVNA02YNNNC1N000046"
+      },
+      {
+        "questionText": "Fick du möjlighet att ställa de frågor du önskade?",
+        "choiceValue": "2",
+        "questionWeight": 0.478,
+        "questionDimension": "Tillgänglighet",
+        "customCode": "TBNVNA05YNNNC1N000001"
+      },
+      {
+        "questionText": "Om barnet ställde frågor till personalen, fick barnet svar som barnet förstod?",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.843,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBNVNA05YNNNC1N000047"
+      },
+      {
+        "questionText": "Om barnet ställde frågor till personalen, svarade personalen med medkänsla och engagemang?",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.289,
+        "questionDimension": "Respekt och bemötande",
+        "customCode": "RBNVNA05YNNNC1N000048"
+      },
+      {
+        "questionText": "Blev barnet bemött med respekt och värdighet oavsett:",
+        "choiceValue": "2",
+        "questionWeight": 0.294,
+        "questionDimension": "Respekt och bemötande",
+        "customCode": "RBNVNA05YNNNC1N000049"
+      },
+      {
+        "questionText": "Om personalen pratade med varandra om barnet, gjordes barnet delaktigt i samtalet?",
+        "choiceValue": "6",
+        "choiceText": "Ej aktuellt",
+        "questionWeight": 0.201,
+        "questionDimension": "Respekt och bemötande",
+        "customCode": "RBNVNA05YNNNC1N000050"
+      },
+      {
+        "questionText": "Om du vid besöket pratade med flera i personalen, var de samstämmiga i kommunikationen?",
+        "choiceValue": "2",
+        "questionWeight": 0.8,
+        "questionDimension": "Kontinuitet och koordinering",
+        "customCode": "KBNVNA05YNNNC1N000006"
+      },
+      {
+        "questionText": "Upplevde du att personalen samarbetade väl?",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.847,
+        "questionDimension": "Kontinuitet och koordinering",
+        "customCode": "KBNVNA05YNNNC1N000007"
+      },
+      {
+        "questionText": "Bemötte läkaren barnet med medkänsla och omsorg?",
+        "choiceValue": "2",
+        "questionWeight": 0.318,
+        "questionDimension": "Respekt och bemötande",
+        "customCode": "RBYVNA05YNNNB1N000051"
+      },
+      {
+        "questionText": "Tog läkaren hänsyn till dina/barnets egna erfarenheter av barnets sjukdom/hälsotillstånd?",
+        "choiceValue": "1",
+        "choiceText": "Nej, inte alls",
+        "questionWeight": 0.144,
+        "questionDimension": "Delaktighet och involvering",
+        "customCode": "DBYVNA05YNNNB1N000052"
+      },
+      {
+        "questionText": "Gjorde läkaren dig delaktig i besluten beträffande barnets vård/behandling?",
+        "choiceValue": "2",
+        "questionWeight": 0.287,
+        "questionDimension": "Delaktighet och involvering",
+        "customCode": "DBYVNA05YNNNB1N000053"
+      },
+      {
+        "questionText": "Hade du önskat att bli mer delaktig i besluten beträffande barnets vård/behandling?",
+        "choiceValue": "3",
+        "questionWeight": 0.059,
+        "questionDimension": "Delaktighet och involvering",
+        "customCode": "DBNVNA05YNNNA1N000054"
+      },
+      {
+        "questionText": "Hade barnet möjlighet att vid behov få känslomässigt stöd från läkaren (t ex om barnet kände oro, rädsla, ångest eller motsvarande)?",
+        "choiceValue": "6",
+        "choiceText": "Ej aktuellt",
+        "questionWeight": 0.93,
+        "questionDimension": "Emotionellt stöd",
+        "customCode": "EBYVNA05YNNNB1N000055"
+      },
+      {
+        "questionText": "Fick du/barnet tillräckligt med information om: medicinering och eventuella biverkningar",
+        "choiceValue": "2",
+        "questionWeight": 0.973,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBNVNA05YNYNB1N000056"
+      },
+      {
+        "questionText": "Fick du/barnet tillräckligt med information om: behandlingen",
+        "choiceValue": "1",
+        "choiceText": "Nej, inte alls",
+        "questionWeight": 0.239,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBNVNA05YNYNB1N000057"
+      },
+      {
+        "questionText": "Fick du/barnet tillräckligt med information om: varningssignaler att vara uppmärksam på beträffande barnets sjukdom/hälsotillstånd eller barnets medicinering/behandling",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.621,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBNVNA05YNYNB1N000064"
+      },
+      {
+        "questionText": "Förklarade läkaren medicineringen/behandlingen på ett sätt som du/barnet förstod?",
+        "choiceValue": "1",
+        "choiceText": "Nej, inte alls",
+        "questionWeight": 0.912,
+        "questionDimension": "Information och kunskap",
+        "customCode": "IBYVNA05YNNNB1N000065"
+      },
+      {
+        "questionText": "Diskuterade du och läkaren vad du kan göra för att förbättra barnets hälsa?",
+        "choiceValue": "1",
+        "choiceText": "Ja",
+        "questionWeight": 0.428,
+        "questionDimension": "Delaktighet och involvering",
+        "customCode": "DBYVNA02YNNNB1N000058"
+      },
+      {
+        "questionText": "Kände barnet smärta vid besöket?",
+        "choiceValue": "2",
+        "choiceText": "Ja, delvis",
+        "questionWeight": 0.596,
+        "questionDimension": "Om patienten",
+        "customCode": "OBNVNA03YNNNA1N000066"
+      },
+      {
+        "questionText": "Om barnet vid besöket kände smärta, fick barnet snabbt hjälp med smärtlindring?",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.662,
+        "questionDimension": "Emotionellt stöd",
+        "customCode": "EBNVNA05YNNNB1N000059"
+      },
+      {
+        "questionText": "Om barnet kände obehag beträffande/om sin sjukdom/hälsotillstånd eller sin medicinering/behandling bemöttes barnet med medkänsla och omsorg?",
+        "choiceValue": "6",
+        "choiceText": "Ej aktuellt",
+        "questionWeight": 0.045,
+        "questionDimension": "Emotionellt stöd",
+        "customCode": "EBNVNA05YNNNC1N000060"
+      },
+      {
+        "questionText": "Anser du att personalen på hälso-/vårdcentralen samordnar barnets kontakter med vården i den utsträckning du behöver?",
+        "choiceValue": "3",
+        "questionWeight": 0.018,
+        "questionDimension": "Kontinuitet och koordinering",
+        "customCode": "KBNVNA05YNNNC1N000067"
+      },
+      {
+        "questionText": "Anser du att barnets aktuella behov av vård har blivit tillgodosett?",
+        "choiceValue": "4",
+        "questionWeight": 0.244,
+        "questionDimension": "Helhetsintryck",
+        "customCode": "HBNVNA05YNNNC1N000061"
+      },
+      {
+        "questionText": "Upplevde du att atmosfären på hälso-/vårdcentralen var bra?",
+        "choiceValue": "5",
+        "choiceText": "Ja, helt och hållet",
+        "questionWeight": 0.134,
+        "questionDimension": "Helhetsintryck",
+        "customCode": "HBNVYA05YNNNC1N000035"
+      },
+      {
+        "questionText": "Skulle du rekommendera hälso-/vårdcentralen till vänner och bekanta?",
+        "choiceValue": "1",
+        "choiceText": "Nej, inte alls",
+        "questionWeight": 0.107,
+        "questionDimension": "Helhetsintryck",
+        "customCode": "HBNVYA05YNNNC1N000022"
+      },
+      {
+        "questionText": "Vänligen ange din högsta avslutade utbildning",
+        "choiceValue": "eftergymnasial",
+        "choiceText": "Eftergymnasial utbildning, universitet eller högskola",
+        "questionWeight": 0.056,
+        "questionDimension": "Om dig",
+        "customCode": "OBNVNA04NNNNA1N000023"
+      },
+      {
+        "questionText": "Vänligen ange din huvudsakliga sysselsättning",
+        "choiceValue": "arbetar",
+        "choiceText": "Arbetar",
+        "questionWeight": 0.096,
+        "questionDimension": "Om dig",
+        "customCode": "OBNVNA04NNNNA1N000024"
+      },
+      {
+        "questionText": "Hur har frågorna i enkäten huvudsakligen besvarats?",
+        "choiceValue": "vårdnadshavare",
+        "choiceText": "Av vårdnadshavare",
+        "questionWeight": 0.862,
+        "questionDimension": "Om dig som vårdnadshavare",
+        "customCode": "OBNVNA02NNNNX0N000062"
+      },
+      {
+        "questionText": "Kände du förtroende för den läkare som barnet träffade?",
+        "choiceValue": "1",
+        "choiceText": "Nej, inte alls",
+        "questionWeight": 0.996,
+        "questionDimension": "Respekt och bemötande",
+        "customCode": "RBYVNA5YNNNB2N000069"
+      },
+      {
+        "questionText": "Har du andra synpunkter eller vill utveckla dina svar?",
+        "choiceValue": "Livet är härligt!"
+      }
+    ],
+    "scores": [
+        {
+            "name": "Helhetsintryck",
+            "value": 0.506,
+            "type": "dimension"            
+        },
+        {
+            "name": "Delaktighet och Involvering",
+            "value": 1.00,
+            "type": "dimension"
+        },        
+        {
+            "name": "Information och Kunskap",
+            "value": 0.75,
+            "type": "dimension"
+        },        
+        {
+            "name": "Kontinuitet och Koordinering",
+            "value": 0,
+            "type": "dimension"
+        },        
+        {
+            "name": "Respekt och Bemötande",
+            "value": 1.00,
+            "type": "dimension"
+        },        
+        {
+            "name": "Tillgänglighet",
+            "value": 1.00,
+            "type": "dimension"
+        }
+    ]   
+  }

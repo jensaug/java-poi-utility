@@ -1,0 +1,1323 @@
+{
+  "name": "Akutsjukvård 2.0",
+  "grouping": "Akutsjukvård",
+  "version": "2.0",
+  "language": {
+    "name": "Svenska",
+    "code": "sv_SE"
+  },
+  "customCode": "VB3AV1XX0N0008",
+  "pdf": "akut bas.pdf",
+  "schema": "questionnaire-2.json",
+  "measurements": [{
+    "name": "Akutsjukvård 2015",
+    "grouping": "Akutsjukvård",
+    "period": "2015"
+  }],
+  "questions": [
+    {
+      "text": "Innan du kom till akutmottagningen, var du i kontakt med 1177 Vårdguiden?",
+      "choices": [
+        {
+          "text": "Ja, de rekommenderade mig att åka till akutmottagningen",
+          "value": "1"
+        }, {
+          "text" : "Ja, med de rekommenderade något annat",
+          "value": "2"
+        }, {
+          "text": "Nej",
+          "value": "3"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVYA03NNNNA1N000240",
+        "dimension": {
+          "name": "Om patienten"
+        }
+      }
+    },
+    {
+      "text": "Bedömde någon ditt hälsotillstånd direkt när du kom till akutmottagningen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "TBNVYA05YNNNC1N000241",
+        "dimension": {
+          "name": "T"
+        }
+      }
+    },
+    {
+      "text": "Fick du information om i vilken ordning man tog hand om (prioriterade) patienterna?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNNNC2N000242",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "text": "Hur var bemötandet från den som tog emot er vid ankomsten/receptionen?",
+      "choices": [
+        {
+          "text": "Mycket dåligt",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Mycket bra",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBNVNA05YNNNC2N000243",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Från det att du kom till akutmottagningen, hur lång tid uppskattar du att du fick vänta på att träffa en läkare?",
+      "choices": [
+        {
+          "text": "Mindre än 30 min",
+          "value": "1"
+        }, {
+          "text": "30 min  - 1 timme",
+          "value": "2"
+        }, {
+          "text": "1 - 2 timmar",
+          "value": "3"
+        }, {
+          "text": "2 - 4 timmar",
+          "value": "4"
+        }, {
+          "text": "Mer än 4 timmar",
+          "value": "5"
+        }, {
+          "text": "Vet inte",
+          "value": "6"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "TBYVYA05YNNNC1N000243",
+        "dimension": {
+          "name": "T"
+        }
+      }
+    },
+    {
+      "text": "Tog läkaren hänsyn till dina egna erfarenheter av din sjukdom/ditt hälsotillstånd?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "DBYVNA05YNNNB1N000244",
+        "dimension": {
+          "name": "D"
+        }
+      }
+    },
+    {
+      "text": "Bemötte läkaren dig med medkänsla och omsorg?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBYVNA05YNNNB1N000245",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Frågade läkaren dig om vilka läkemedel du använder?",
+      "choices": [
+        {
+          "text": "Ja",
+          "value": "1"
+        },{
+          "text": "Nej",
+          "value": "2"
+        },{
+          "text": "Vet ej",
+          "value": "3"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "KBYVNA02YNNNB1N000246",
+        "dimension": {
+          "name": "K"
+        }
+      }
+    },
+    {
+      "text": "Om du vid besöket pratade med flera i personalen, var de samstämmiga i kommunikationen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "KBNVNA05YNNNC1N000006",
+        "dimension": {
+          "name": "K"
+        }
+      }
+    },
+    {
+      "text": "Om du ställde frågor till personalen, svarade personalen med medkänsla och engagemang?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBNVNA05YNNNC1N000003",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Om du ställde frågor till personalen, fick du svar som du förstod?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNNNC1N000002",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "text": "Om personalen pratade med varandra om dig, kände du dig delaktig i samtalet?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBNVNA05YNNNC1N000005",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Kände du dig bemött med respekt och värdighet oavsett: kön, könsöverskridande identitet eller uttryck, etnisk tillhörighet, religion eller annan trosuppfattning, funktionsnedsättning, sexuell läggning eller ålder?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBNVNA05YNNNC1N000004",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Gjorde läkaren dig delaktig i besluten beträffande din vård/behandling?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "DBYVNA05YNNNB1N000247",
+        "dimension": {
+          "name": "D"
+        }
+      }
+    },
+    {
+      "text": "Hade du önskat att du blivit mer delaktig i besluten beträffande din vård/behandling?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "DBNVNA05YNNNA1N000011",
+        "dimension": {
+          "name": "D"
+        }
+      }
+    },
+    {
+      "group": "Fick du tillräckligt med information om:",
+      "text": "Fick du tillräckligt med information om väntetider under ditt besök",
+      "part": "väntetider under ditt besök",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNYNC1N000248",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "group": "Fick du tillräckligt med information om:",
+      "text": "Fick du tillräckligt med information om din sjukdom/ditt hälsotillstånd",
+      "part": "din sjukdom/ditt hälsotillstånd",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNYNC1N000249",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "group": "Fick du tillräckligt med information om:",
+      "text": "Fick du tillräckligt med information om behandlingen",
+      "part": "behandlingen",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNYNB1N000014",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "group": "Fick du tillräckligt med information om:",
+      "text": "Fick du tillräckligt med information om medicinering och eventuella biverkningar",
+      "part": "medicinering och eventuella biverkningar",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNYNB1N000013",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "group": "Fick du tillräckligt med information om:",
+      "text": "Fick du tillräckligt med information om varningssignaler att vara uppmärksam på beträffande din sjukdom/ditt hälsotillstånd eller din medicinering/behandling?",
+      "part": "",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBNVNA05YNYNB1N000015",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "text": "Förklarade läkaren medicineringen/behandlingen på ett sätt som du förstod?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBYVNA05YNNNB1N000250",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "text": "Fick du möjlighet att ställa de frågor du önskade?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "TBNVNA05YNNNC1N000001",
+        "dimension": {
+          "name": "T"
+        }
+      }
+    },
+    {
+      "text": "Om du kände obehag beträffande din sjukdom/ditt hälsotillstånd eller din medicinering/behandling bemöttes du med medkänsla och omsorg?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "EBNVYA05YNNNC1N000251",
+        "dimension": {
+          "name": "E"
+        }
+      }
+    },
+    {
+      "text": "Hade du möjlighet att vid behov få känslomässigt stöd från läkaren (t ex om du kände oro, rädsla, ångest eller motsvarande)?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "EBYVNA05YNNNB1N000252",
+        "dimension": {
+          "name": "E"
+        }
+      }
+    },
+    {
+      "text": "Fick du tillräckligt med avskildhet när du och personalen pratade om ditt tillstånd eller din behandling?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "RBNVNA05YNNNB2N000253",
+        "dimension": {
+          "name": "R"
+        }
+      }
+    },
+    {
+      "text": "Om du vid besöket kände smärta, fick du snabbt hjälp med smärtlindring?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "EBNVNA05YNNNB1N000017",
+        "dimension": {
+          "name": "O"
+        }
+      }
+    },
+    {
+      "text": "Om det under akutbesöket gjordes några provtagningar/undersökningar (t ex blodprov eller röntgen), förklarade läkaren resultaten på ett sätt som du förstod?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "IBYVNA05YNNNB2N000254",
+        "dimension": {
+          "name": "I"
+        }
+      }
+    },
+    {
+      "text": "Gav läkaren din familj/närstående den information de önskade?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "DBYVNA05YNNNB1N000255",
+        "dimension": {
+          "name": "D"
+        }
+      }
+    },
+    {
+      "text": "Om din familj/närstående ville prata med en läkare, hade de då möjlighet att göra det?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "TBYVNA05YNNNC1N000256",
+        "dimension": {
+          "name": "T"
+        }
+      }
+    },
+    {
+      "text": "Upplevde du att personalen samarbetade väl?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "KBNVNA05YNNNC1N000007",
+        "dimension": {
+          "name": "K"
+        }
+      }
+    },
+    {
+      "text": "Anser du att ditt aktuella behov av vård har blivit tillgodosett?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "HBNVNA05YNNNC1N000021",
+        "dimension": {
+          "name": "H"
+        }
+      }
+    },
+    {
+      "text": "Skulle du rekommendera akutmottagningen till någon i din situation?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "HBNVYA05YNNNC1N000257",
+        "dimension": {
+          "name": "H"
+        }
+      }
+    },
+    {
+      "text": "Kände du dig väl omhändertagen och trygg när du var på akutmottagningen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "HBNVYA05YNNNC2N000258",
+        "dimension": {
+          "name": "H"
+        }
+      }
+    },
+    {
+      "text": "Upplevde du att det var rent på akutmottagningen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "HBNVYA05YNNNC2N000259",
+        "dimension": {
+          "name": "H"
+        }
+      }
+    },
+    {
+      "text": "Hur lång tid uppskattar du att du vistades på akuten från det att du kom till dess att du fick gå hem/flyttades över till en vårdavdelning?",
+      "choices": [
+        {
+          "text": "Högst en timme",
+          "value": "1"
+        }, {
+          "text": "2-3 timmar",
+          "value": "2"
+        }, {
+          "text": "3-4 timmar",
+          "value": "3"
+        }, {
+          "text": "4-6 timmar",
+          "value": "4"
+        }, {
+          "text": "Mer än 6 timmar",
+          "value": "5"
+        }, {
+          "text": "Vet inte",
+          "value": "6"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "TBNVNA05YNNNC2N000260",
+        "dimension": {
+          "name": "T"
+        }
+      }
+    },
+    {
+      "text": "Hur många gånger uppskattar du att du besökt en akutmottagning för eget behov de senaste 6 månaderna?",
+      "choices": [
+        {
+          "text": "1 besök",
+          "value": "1"
+        }, {
+          "text": "2 besök",
+          "value": "2"
+        }, {
+          "text": "3 besök",
+          "value": "3"
+        }, {
+          "text": "4 besök eller fler",
+          "value": "4"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVYA05YNNNA2N000261",
+        "dimension": {
+          "name": "Q"
+        }
+      }
+    },
+    {
+      "text": "Hur lätt eller svårt upplever du att det är att få vård på kvällar/helgdagar utan att gå till akutmottagningen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVYA05YNNNA2N000262",
+        "dimension": {
+          "name": "O"
+        }
+      }
+    },
+    {
+      "text": "Anser du att det du sökte akutvård för hade kunnat behandlas av en hälso- eller vårdcentral?",
+      "choices": [
+        {
+          "text": "Ja",
+          "value": "1"
+        }, {
+          "text": "Nej",
+          "value": "2"
+        }, {
+          "text": "Vet ej",
+          "value": "3"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVNA05YNNNA2N000263",
+        "dimension": {
+          "name": "O"
+        }
+      }
+    },
+    {
+      "text": "Vänligen ange din högsta avslutade utbildning",
+      "choices": [
+        {
+          "text": "Grundskola, folkskola eller motsvarande",
+          "value": "1"
+        }, {
+          "text": "Gymnasium, realskola eller motsvarande",
+          "value": "2"
+        }, {
+          "text": "Eftergymnasial utbildning, universitet eller högskola",
+          "value": "3"
+        }, {
+          "text": "Ingen avslutad utbildning",
+          "value": "4"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVNA04NNNNA1N000023",
+        "dimension": {
+          "name": "O"
+        }
+      }
+    },
+    {
+      "text": "Vänligen ange din huvudsakliga sysselsättning",
+      "choices": [
+        {
+          "text": "Arbetar",
+          "value": "1"
+        }, {
+          "text": "Arbetslös",
+          "value": "2"
+        }, {
+          "text": "Studerar",
+          "value": "3"
+        }, {
+          "text": "Pensionär",
+          "value": "4"
+        }, {
+          "text": "Övrigt",
+          "value": "5"
+        }
+      ],
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "OBNVNA04NNNNA1N000024",
+        "dimension": {
+          "name": "O"
+        }
+      }
+    },
+    {
+      "text": "Blev du nöjd med besöket som helhet på akutmottagningen?",
+      "choices": [
+        {
+          "text": "Nej, inte alls",
+          "value": "1"
+        }, {
+          "value": "2"
+        }, {
+          "value": "3"
+        }, {
+          "value": "4"
+        }, {
+          "text": "Ja, helt och hållet",
+          "value": "5"
+        }
+      ],
+      "notApplicable": {
+        "text": "Ej aktuellt",
+        "value": "6"
+      },
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård Östergötland",
+          "short": "AS-östergötland"
+        },
+        "customCode": "HBNVYA05NNNNC1N000265",
+        "dimension": {
+          "name": "X"
+        }
+      }
+    },
+    {
+      "text": "Det går inte att fråga om allt i en enkät. Har du andra synpunkter eller vill utveckla dina svar?",
+      "explanation": "Var god skriv inom rutans ramar, texta tydligt.",
+      "choiceFreeText": true,
+      "moduleQuestion": {
+        "module": {
+          "name": "Akutsjukvård 1",
+          "short": "AS1"
+        },
+        "customCode": "XBNVNC00NNNNX0N000025"
+      }             
+    }
+  ]
+}

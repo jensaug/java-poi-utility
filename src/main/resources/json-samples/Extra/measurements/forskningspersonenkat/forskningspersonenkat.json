@@ -1,0 +1,174 @@
+{
+  "name": "Forskningspersonenkat 2017",
+  "grouping": "Forskningspersonenkat",
+  "period": "2017",
+  "method": "Utdelad",
+  "contract": "Del 2",
+  "process": "Nationell gemensam mätning",
+  "implementor": "icquality",
+  "timeline": [
+    {
+      "startDate": "2017-06-01",
+      "endDate": "2017-07-01",
+      "name": "Mätningsunderlag sammanställs",
+      "roles": []
+    },
+    {
+      "startDate": "2017-06-30",
+      "endDate": "2017-12-31",
+      "name": "Vårdkontakter genomförs",
+      "roles": []
+    },
+    {
+      "startDate": "2017-06-30",
+      "endDate": "2017-12-31",
+      "name": "Inbjudan och enkät delas ut",
+      "roles": []
+    },
+    {
+      "startDate": "2018-02-01",
+      "name": "Resultatåterföring fasta svarsalternativ",
+      "roles": []
+    }    
+  ],
+  "selectionCriterias": [
+    {
+      "api": "maxAmount",
+      "name": "alla",
+      "description": "Avser alla besök av vuxna",
+      "include": "Rättspsykiatrikontakter där patient haft minst ett tidigare besök.",
+      "exclude": "Rättspsykiatrikontakt första bedömning. Svårt psykotiskt tillstånd. Svårt dement.",
+      "versions": [
+        {
+          "name": "alla",
+          "questionnaires": [
+            "Rättspsykiatri 2017"
+          ]
+        }
+      ],
+      "invitationSuggestion": {
+        "interval": []
+      },
+      "optional": false,
+      "volume": {
+        "unlimited": false
+      }
+    }
+  ],
+  "suborderSpecific": [
+    {
+      "api": "signedBy",
+      "name": "Vilken signatur skall finnas i följebrev?",
+      "description": "Namn och titel på personen som skall signera följebrevet till alla enkäter inom region/landsting. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+    },
+    {
+      "api": "responsiblesUpload",
+      "name": "Ansvariga för uppladdning av vårdkontakter",
+      "description": "Ange minst en som är ansvarig för uppladdning av vårdkontakter",
+      "multiple": true,
+      "input" : [
+        {
+          "api": "responsibleName",
+          "name": "Namn på ansvarig",
+          "description": "Ange både för- och efternamn på den person ansvarig för uppladdning av vårdkontakter"
+        },
+        {
+          "api": "responsiblePhone",
+          "name": "Nummer till ansvarig",
+          "description": "Ange fast eller mobilnummer"
+        },
+        {
+          "api": "responsibleEmail",
+          "name": "E-post till ansvarig",
+          "description": "Ange e-post till ansvarig",
+          "input": "email"
+        }                
+      ]
+    }    
+  ],
+  "organisationSpecific": [
+    {
+      "api": "managerEmails",
+      "name": "Lista med epost för aktuella verksamhetschefer",
+      "multiple": true,
+      "description": "De tillagda epost-adresserna gällande denna verksamhet kommer att vidarebefodras till enkätleverantören och få tillgång till resultat",
+      "options": [],
+      "throughputdata": [],
+      "optional": false,
+      "freeText": false
+    }
+  ],
+  "organisationInvitation": [
+    {
+      "api": "softName",
+      "name": "Namn i inbjudan",
+      "description": "Fullständigt enhetsnamn. Exempelvis 'Kliniken i LillaStaden'. Angivet enhetsnamn används i följebrevet till respondent. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i kallelser/kontakter med patient."
+    },
+    {
+      "api": "responsible",
+      "name": "Ansvarig för uppladdning av vårdkontakter på enhet",
+      "description": "Ange person som är ansvarig för hantering av enkät på enhet",
+      "input" : [
+        {
+          "api": "responsibleName",
+          "name": "Namn på ansvarig",
+          "description": "Ange både för- och efternamn på den person på organisationen som är ansvarig för hantering av enkät"
+        },
+        {
+          "api": "responsiblePhone",
+          "name": "Nummer till ansvarig",
+          "description": "Ange fast eller mobilnummer"
+        },
+        {
+          "api": "responsibleEmail",
+          "name": "E-post till ansvarig",
+          "description": "Ange e-post till ansvarig",
+          "input": "email"
+        }
+      ]
+    },
+    {
+      "api": "invitationsGiven",
+      "name": "Antalet faktiska utdelade enkäter",
+      "description": "Ifylles efter mätningens slut",
+      "input": "number",
+      "optional": true
+    }    
+  ],
+  "organisationMetadata": [
+    {
+      "api": "throughput",
+      "name": "Genomströmning",
+      "throughputdata": [
+        {
+          "api": "maxAmount",
+          "name": "Genomströmning under förra mätperioden",
+          "description": "Genomströmning används för att ge förslag på hur många injudningar som bör skicka ut för att få statistiskt säkerställda resultat."
+        }
+      ],
+      "options": [],
+      "optional": false
+    },
+    {
+      "api": "doneEdit",
+      "name": "Klar",
+      "description": "Indikerar om editering av aktuell enhet är klar eller inte.",
+      "options": [],
+      "throughputdata": [],
+      "optional": false
+    }
+  ],
+  "public": {
+    "noPublicDn": true,
+    "structure": []
+  },
+  "tags": [],
+  "links": [],
+  "hsa": {
+    "filter": {
+        "businessClassificationCode" : [
+                "1614", "1615"
+        ]
+    }
+  }
+}

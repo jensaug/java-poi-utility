@@ -1,0 +1,43 @@
+{
+    "measurement": "Primärvård 2016",
+    "securityContext": "public",
+    "aspect": "public",
+    "dn": "c=Sverige",
+    "filters": "selectionCriteria:Läkarbesök, version:vuxen",
+    "status": "ok",
+    "hsaId": "SE2321000131-E000000007687",
+    "dimensions": [ 
+        "Helhetsintryck", 
+        "Emotionellt stöd", 
+        "Delaktighet och involvering", 
+        "Respekt och bemötande", 
+        "Kontinuitet och koordinering", 
+        "Information och kunskap", 
+        "Tillgänglighet"
+    ],
+    "percentagesPositive": [ 
+        79, 
+        70, 
+        79, 
+        84, 
+        69, 
+        73, 
+        81
+    ],
+    "invitees": {
+        "answered": 79674,
+        "invited": 186686,
+        "invitedAdjusted": 185793,
+        "answeredPercentage": 42.7,
+        "answeredAdjustedPercentage": 42.9
+    },
+    "trends": [ 
+        -1, 
+        -1, 
+        1, 
+        -1, 
+        0, 
+        -1, 
+        1
+    ]
+}

@@ -1,0 +1,727 @@
+{
+    "name": "Primärvård Läkarbesök v2.0",
+    "measurements": [{
+        "name": "Primärvård 2015",
+        "grouping": "Primärvård",
+        "period": "2015"
+    }],
+    "questions": [{
+        "prefix": "F1",
+        "text": "Vad anser du om tiden du fick vänta på att få komma till mottagningen?",
+        "choices": [{
+            "code": "4",
+            "text": "Den var alldeles för lång",
+            "weight": 0
+        }, {
+            "code": "1",
+            "text": "Jag behövde inte vänta",
+            "weight": 1
+        }, {
+            "code": "2",
+            "text": "Den var acceptabel",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Den var något för lång",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "kontakt",
+            "text": "Din kontakt med mottagningen"
+        },
+        "metadata": {
+            "category": "indikator",
+            "area": "tillganglighet"
+        }
+    }, {
+        "prefix": "F2",
+        "text": "Hur bedömer du mottagningens tillgänglighet i allmänhet? (kan gälla telefon, e-post, personligt besök etc.)",
+        "choices": [{
+            "code": "3",
+            "text": "Bra",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Någorlunda",
+            "weight": 0.25
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Utmärkt",
+            "weight": 1
+        }, {
+            "code": "5",
+            "text": "Dålig",
+            "weight": 0
+        }, {
+            "code": "2",
+            "text": "Mycket bra",
+            "weight": 0.75
+        }],
+        "section": {
+            "prefix": "kontakt",
+            "text": "Din kontakt med mottagningen"
+        }
+    }, {
+        "prefix": "F3",
+        "text": "Anser du att mottagningen behöver förbättra tillgängligheten på något av följande områden?",
+        "type": "multiSelect",
+        "choices": [{
+            "code": "1",
+            "text": "Telefonkontakt",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Kontakt via e-post",
+            "weight": null
+        }, {
+            "code": "3",
+            "text": "Information på webbplats",
+            "weight": null
+        }, {
+            "code": "4",
+            "text": "Öppettider",
+            "weight": null
+        }, {
+            "code": "5",
+            "text": "Drop-in tider",
+            "weight": null
+        }, {
+            "code": "6",
+            "text": "Nej, tillgängligheten fungera bra",
+            "weight": null
+        }, {
+            "code": "7",
+            "text": "Annat, nämligen:",
+            "freeText": true,
+            "weight": null
+        }],
+        "section": {
+            "prefix": "kontakt",
+            "text": "Din kontakt med mottagningen"
+        }
+    }, {
+        "prefix": "F4",
+        "text": "Brukar du få träffa samma läkare vid dina besök på mottagningen?",
+        "choices": [{
+            "code": "1",
+            "text": "Ja",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Jag har inget behov av att träffa samma läkare",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "4",
+            "text": "Jag har inte besökt läkare på den här mottagningen mer än en gång",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "kontakt",
+            "text": "Din kontakt med mottagningen"
+        }
+    }, {
+        "prefix": "F5",
+        "text": "Hur bedömer du bemötandet du fick från den som tog emot dig vid ankomsten/receptionen?",
+        "choices": [{
+            "code": "2",
+            "text": "Mycket bra",
+            "weight": 0.75
+        }, {
+            "code": "1",
+            "text": "Utmärkt",
+            "weight": 1
+        }, {
+            "code": "5",
+            "text": "Dåligt",
+            "weight": 0
+        }, {
+            "code": "6",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "3",
+            "text": "Bra",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Någorlunda",
+            "weight": 0.25
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F6",
+        "text": "Fick du träffa den läkare som du ville träffa?",
+        "choices": [{
+            "code": "3",
+            "text": "Jag har ingen särskild läkare som jag ville träffa",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "1",
+            "text": "Ja",
+            "weight": 1
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F7",
+        "text": "Lyssnade läkaren till vad du hade att säga?",
+        "choices": [{
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F8",
+        "text": "Tog läkaren tillräcklig hänsyn till dina kunskaper och erfarenheter av din sjukdom/dina besvär?",
+        "choices": [{
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F9",
+        "text": "Fick du information om din diagnos eller förklaring till dina besvär på ett sätt som du förstod?",
+        "choices": [{
+            "code": "4",
+            "text": "Jag behövde ingen information",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "5",
+            "text": "Jag hade en diagnos sedan tidigare",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F10",
+        "text": "Fick du information om din behandling på ett sätt som du förstod?",
+        "choices": [{
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "4",
+            "text": "Jag behövde ingen information",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        },
+        "metadata": {
+            "category": "indikator",
+            "area": "information"
+        }
+    }, {
+        "prefix": "F11",
+        "text": "Hur bedömer du bemötandet du fick från läkaren?",
+        "choices": [{
+            "code": "3",
+            "text": "Bra",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Någorlunda",
+            "weight": 0.25
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "5",
+            "text": "Dåligt",
+            "weight": 0
+        }, {
+            "code": "2",
+            "text": "Mycket bra",
+            "weight": 0.75
+        }, {
+            "code": "1",
+            "text": "Utmärkt",
+            "weight": 1
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        },
+        "metadata": {
+            "category": "indikator",
+            "area": "bemotande",
+            "attributes": ["filter-start", "dynamiskafragor", "ompatient", "omvardgivaren"]
+        }
+    }, {
+        "prefix": "F12",
+        "text": "Förklarade läkaren vad du borde göra om problemen eller symptomen skulle fortsätta, bli värre eller komma tillbaka?",
+        "choices": [{
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F13",
+        "text": "Diskuterade du och läkaren vad du själv kan göra för att förbättra din hälsa?",
+        "choices": [{
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F14",
+        "text": "Kände du dig delaktig i beslut om din vård och behandling, så mycket som du önskade?",
+        "choices": [{
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        },
+        "metadata": {
+            "category": "indikator",
+            "area": "delaktighet"
+        }
+    }, {
+        "prefix": "F15",
+        "text": "Fick du recept på några läkemedel vid besöket?",
+        "choices": [{
+            "code": "1",
+            "text": "Nej",
+            "weight": null,
+            "skipTo": "F18"
+        }, {
+            "code": "2",
+            "text": "Ja",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        },
+        "metadata": {
+            "attributes": ["filter-start"]
+        }
+    }, {
+        "prefix": "F16",
+        "text": "Frågade läkaren eller någon annan ur personalen dig om andra läkemedel som du använder?",
+        "choices": [{
+            "code": "2",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "1",
+            "text": "Ja",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "metadata": {
+            "attributes": ["filter-hopp"]
+        },
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F17",
+        "text": "Talade du med läkaren eller någon annan ur personalen om eventuella biverkningar av läkemedel som du skulle uppmärksamma?",
+        "choices": [{
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "4",
+            "text": "Ej aktuellt",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }],
+        "metadata": {
+            "attributes": ["filter-hopp"]
+        },
+        "section": {
+            "prefix": "mottagningen",
+            "text": "På mottagningen"
+        }
+    }, {
+        "prefix": "F18",
+        "text": "Anser du att ditt aktuella behov av sjukvård blivit tillgodosett vid ditt besök på mottagningen?",
+        "choices": [{
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "metadata": {
+            "attributes": ["filter-landning"],
+            "category": "indikator",
+            "area": "upplevdnytta"
+        },
+        "section": {
+            "prefix": "avslutningsvis",
+            "text": "Avslutningsvis"
+        }
+    }, {
+        "prefix": "F19",
+        "text": "Skulle du rekommendera den här mottagningen till andra?",
+        "choices": [{
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }],
+        "metadata": {
+            "category": "indikator",
+            "area": "rekomendera"
+        },
+        "section": {
+            "prefix": "avslutningsvis",
+            "text": "Avslutningsvis"
+        }
+   }, {
+        "prefix": "F20",
+        "text": "Anser du att personalen på mottagningen samordnar dina olika vårdkontakter i den utsträckning du behöver?",
+        "choices": [{
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Delvis",
+            "weight": 0.5
+        }, {
+            "code": "4",
+            "text": "Jag behöver ingen samordning",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Ja, helt och hållet",
+            "weight": 1
+        }, {
+            "code": "3",
+            "text": "Nej",
+            "weight": 0
+        }, {
+            "code": "5",
+            "text": "Jag vet inte",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "avslutningsvis",
+            "text": "Avslutningsvis"
+        }
+    }, {
+        "prefix": "F21",
+        "text": "I allmänhet, hur skulle du vilja säga att din hälsa är?",
+        "choices": [{
+            "code": "3",
+            "text": "Bra",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Utmärkt",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Mycket bra",
+            "weight": null
+        }, {
+            "code": "5",
+            "text": "Dålig",
+            "weight": null
+        }, {
+            "code": "4",
+            "text": "Någorlunda",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "bakgrund",
+            "text": "Bakgrundsfrågor"
+        }
+    }, {
+        "prefix": "F22",
+        "text": "Är svenska ditt modersmål?",
+        "choices": [{
+            "code": "2",
+            "text": "Nej",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Ja",
+            "weight": null
+        }, {
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "bakgrund",
+            "text": "Bakgrundsfrågor"
+        }
+    }, {
+        "prefix": "F23",
+        "text": "Hur gammal är du?",
+        "type": "birthYear",
+        "section": {
+            "prefix": "bakgrund",
+            "text": "Bakgrundsfrågor"
+        }
+    }, {
+        "prefix": "F24",
+        "text": "Är du man eller kvinna?",
+        "choices": [{
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Man",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Kvinna",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "bakgrund",
+            "text": "Bakgrundsfrågor"
+        }
+    }, {
+        "prefix": "F25",
+        "text": "Vilken är din högsta avslutade utbildning?",
+        "choices": [{
+            "code": "-",
+            "text": "Ej ifylld",
+            "weight": null
+        }, {
+            "code": "1",
+            "text": "Grundskola eller likvärdigt",
+            "weight": null
+        }, {
+            "code": "2",
+            "text": "Gymnasium eller likvärdigt",
+            "weight": null
+        }, {
+            "code": "3",
+            "text": "Universitet eller högskola",
+            "weight": null
+        }],
+        "section": {
+            "prefix": "bakgrund",
+            "text": "Bakgrundsfrågor"
+        }
+    }, {
+        "prefix": "F26",
+        "text": "Det går inte att fråga allt i ett formulär. Är det något som du vill framföra som vi inte frågat om tar vi gärna emot dina synpunkter:",
+        "freeText": true,
+        "section": {
+            "prefix": "tillsist",
+            "text": "Till sist"
+        }
+    }, {
+        "prefix": "F27",
+        "text": "Hur tycker du att den här enkäten fungerade? Var det något som var svårt att svara på? Saknades någon fråga, eller var någon fråga onödig? Har du andra kommentarer om enkäten?",
+        "freeText": true,
+        "section": {
+            "prefix": "tillsist",
+            "text": "Till sist"
+        }
+    }]
+}

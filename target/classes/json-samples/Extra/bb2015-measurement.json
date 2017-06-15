@@ -1,0 +1,118 @@
+{
+  "name": "BB Förlossning 2015",
+  "grouping": "BB Förlossning",
+  "period": "2015",
+  "previousMeasurement": {
+    "name": "BB Förlossning 2011",
+    "grouping": "BB Förlossning",
+    "period": "2011"
+  },
+  "method": "Digital",
+  "contract": "Del 2",
+  "process": "Behovs- och målgruppsanpassad",  
+  "implementor": "cmaresearch",
+  "timeline": [
+    {
+      "startDate": "2015-10-01",
+      "endDate": "2015-10-15",
+      "name": "Kontaktpersoner färdigställer mätningunderlag",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "startDate": "2015-10-16",
+      "name": "Enkätleverantör hämtar mätunderlag",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "startDate": "2015-10-16",
+      "endDate": "2015-11-15",
+      "name": "Aktuella vårdkontakter genomförs",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "startDate": "2015-10-16",
+      "endDate": "2015-12-15",
+      "name": "Enkät genomförs",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "startDate": "2016-01-01",
+      "endDate": "2016-02-28",
+      "name": "Slutleverans av enkätsvar till Stödstrukturen",
+      "roles": [
+        "admin",
+        "enkätleverantör"
+      ]
+    }
+  ],
+  "selectionCriterias": [
+    {      
+      "name": "BB Förlossning",
+      "api": "bb",        
+      "volume": {
+        "unlimited": true        
+      },
+      "include": "Mammor från 16 år utskrivna till hemmet med levande barn",
+      "exclude": "Hembesök, BVC & MVC/BMM-besök",
+      "comment": "",
+      "versions": [
+        {
+          "name": "Alla",
+          "comment": "Gällande mottagare barn: Mamman är patienten, inga barn ingår i mätningen",
+          "questionnaires": [
+            "BB Förlossning v2.0"
+          ]
+        }
+      ]
+    }
+  ],
+  "suborderSpecific": [
+    {
+      "api": "signedBy",
+      "name": "Vilken signatur skall finnas i följebrev?",
+      "description": "Namn och titel på personen som skall signera följebrevet till alla enkäter inom region/landsting. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+    }
+  ],
+  "organisationSpecific": [
+    {
+      "api": "managerEmails",
+      "name": "Lista med epost för aktuella verksamhetschefer",
+      "multiple": true,
+      "description": "De tillagda epost-adresserna gällande denna verksamhet kommer att vidarebefodras till enkätleverantören och få tillgång till resultat"
+    }
+  ],
+  "organisationInvitation": [
+    {
+      "api": "softName",
+      "name": "Enhetsnamn",
+      "description": "Fullständigt enhetsnamn. Exempelvis 'Vårdcentralen i LillaStaden'. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i kallelser/kontakter med patient."
+    }
+  ],
+  "organisationMetadata": [
+    {
+      "api": "producer",
+      "name": "Producent",
+      "description": "T.ex.'Landstingsdriven', eller det företag som producerar vården. T.ex.'Privata Vårdföretaget AB'"
+    },
+    {
+      "api": "doneEdit",
+      "name": "Klar",
+      "description": "Indikerar om editering av aktuell enhet är klar eller inte."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "name": "Specialiserad sjukhusvård sluten 2016",
+  "grouping": "Specialiserad sjukhusvård sluten",
+  "period": "2016",
+  "customCode": "SV16",
+  "previousMeasurement": {
+    "name": "Specialiserad sjukhusvård sluten 2014",
+    "grouping": "Specialiserad sjukhusvård sluten",
+    "period": "2014"
+  },
+  "method": "Postal",
+  "contract": "Del 1",
+  "process": "Nationell gemensam mätning",
+  "implementor": "icquality",
+  "public": {
+      "isPublished": false,
+      "structure": [
+        {
+           "key" : "country",
+           "label" : "Land",
+           "labelPlural": "Länder"
+        },{
+           "key" : "region",
+           "label" : "Landsting",
+           "labelPlural" : "Landsting"
+        },{
+           "key" : "hospital",
+           "label" : "Sjukhus",
+           "labelPlural" : "Sjukhus"
+        },{
+           "key" : "unit",
+           "label" : "Klinik",
+           "labelPlural" : "Kliniker"
+        }
+      ],
+      "dimensions": [
+        "Helhetsintryck",
+        "Emotionellt stöd",
+        "Delaktighet och involvering",
+        "Respekt och bemötande",
+        "Kontinuitet och koordinering",
+        "Information och kunskap",
+        "Tillgänglighet"
+    ],
+    "filters": [
+        {
+            "label": "Kön",
+            "choices": [
+                {
+                "name": "Män",
+                "value": "sex-male",
+                "match": "'respondent.metadata.gender': 'male'"
+                },
+                {
+                "name": "Kvinnor",
+                "value": "sex-female",
+                "match": "'respondent.metadata.gender': 'female'"
+                }
+            ]
+        }
+    ]
+  },
+  "responseValidity": {
+      "startDate": "2016-01-01",
+      "endDate": "2016-12-31",
+    "lastModified": "2016-01-26"
+  },
+  "timeline": [
+    {
+      "startDate": "2016-03-01",
+      "endDate": "2016-04-30",
+      "name": "Urvalsperiod",
+      "roles": []
+    },
+    {
+      "endDate": "2016-02-29",
+      "name": "Avrop",
+      "roles": []
+    },
+    {
+      "endDate": "2016-03-03",
+      "name": "Mätningsunderlag",
+      "roles": []
+    },
+    {
+      "startDate": "2016-03-07",
+      "endDate": "2016-03-11",
+      "name": "Testuppladdning av urvalsunderlag",
+      "roles": []
+    },
+    {
+      "startDate": "2016-03-03",
+      "endDate": "2016-03-23",
+      "name": "Mätningsunderlag färdigställs",
+      "roles": []
+    },
+    {
+      "startDate": "2016-04-01",
+      "endDate": "2016-04-14",
+      "name": "Uppladdning av urvalsunderlag",
+      "roles": []
+    },
+    {
+      "endDate": "2016-04-21",
+      "name": "Inbjudan skickas ut",
+      "roles": []
+    },
+    {
+      "startDate": "2016-xx-xx",
+      "name": "Resultatåterföring landsting/region",
+      "roles": []
+    },
+    {
+      "startDate": "2016-xx-xx",
+      "name": "Resultatåterföring publik",
+      "roles": []
+    }
+  ],
+  "selectionCriterias": [
+    {
+      "api": "maxAmount",
+      "name": "Alla",
+      "description": "Avser alla besök",
+      "include": "Patienter som varit inskrivna minst 24 timmar och utskrivna under urvalsperioden. Samtliga åldrar inkluderade.",
+      "exclude": "Patienter med adress utanför Sverige, patienter med skyddad identitet, patienter utan folkbokföringsadress, patienter som genomgått abort. I vissa fall kan landstingen/regionerna utarbeta egna exklusionskriterier.",
+      "comment": "Vårdnadshavarenkät till samtliga patienter under 15 år.",
+      "versions": [
+        {
+          "name": "vuxen",
+          "questionnaires": [
+            "Specialiserad sjukhusvård sluten vuxen 2.0"
+          ]
+        },
+        {
+          "name": "vårdnadshavare",
+          "comment": "Vårdnadshavarenkät är riktad till barnet och målsman, ställd till målsman i utskicket",
+          "questionnaires": [
+            "Specialiserad sjukhusvård sluten vårdnadshavare 2.0"
+          ]
+        }
+      ],
+      "invitationSuggestion" : {
+         "interval" : [
+            {
+                "min" : 150,
+                "max" : 299,
+                "number" : 150
+            },
+            {
+                "min": 300,
+                "max": 500,
+                "number": 200
+            },
+            {
+                "min" : 501,
+                "number" : 300
+            }
+         ]
+      }
+    }
+  ],
+  "suborderSpecific": [
+    {
+      "api": "signedBy",
+      "name": "Vilken signatur skall finnas i följebrev?",
+      "description": "Namn och titel på personen som skall signera följebrevet till alla enkäter inom region/landsting. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+    }
+  ],
+  "organisationSpecific": [
+    {
+      "api": "managerEmails",
+      "name": "Lista med epost för aktuella verksamhetschefer",
+      "multiple": true,
+      "description": "De tillagda epost-adresserna gällande denna verksamhet kommer att vidarebefodras till enkätleverantören och få tillgång till resultat"
+    }
+  ],
+  "organisationInvitation": [
+    {
+      "api": "softName",
+      "name": "Enhetsnamn",
+      "description": "Fullständigt enhetsnamn. Exempelvis 'Kliniken i LillaStaden'. Angivet enhetsnamn används i följebrevet till respondent. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i kallelser/kontakter med patient."
+    }
+  ],
+  "organisationMetadata": [
+    {
+      "api": "producer",
+      "name": "Producent",
+      "description": "T.ex.'Landstingsdriven', eller det företag som producerar vården. T.ex.'Privata Vårdföretaget AB'"
+    },
+    {
+      "api": "throughput",
+      "name": "Genomströmning",
+      "throughputdata": [
+        {
+          "api": "maxAmount",
+          "name": "Genomströmning under föregående år",
+          "description": "Ange unika läkarbesök för motsvarande månad föregående år. Genomströmning används för att ge förslag på hur många injudningar som bör skicka ut för att få statistiskt säkerställda resultat."
+        }
+      ]
+    },
+    {
+      "api": "doneEdit",
+      "name": "Klar",
+      "description": "Indikerar om editering av aktuell enhet är klar eller inte."
+    }
+  ],
+  "hsa": {
+      "filter": {
+          "businessClassificationCode": ["1115", "1124", "1125", "1502", "1106", "1131", "1108", "1110", "1116", "1105",
+                                       "1311", "1313", "1316", "1324", "1329", "1332", "1335", "1333", "1011", "1359",
+                                       "1807", "1318", "1123", "1121", "1013", "1102", "1312", "1147"],
+          "businessType": "01",
+          "careType": ["01", "02"]
+      }
+  }
+}

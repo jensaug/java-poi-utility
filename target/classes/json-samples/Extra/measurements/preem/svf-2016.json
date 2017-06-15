@@ -1,0 +1,211 @@
+{
+    "name": "Standardiserade vårdförlopp inom cancervård 2016",
+    "grouping": "Standardiserade vårdförlopp inom cancervård",
+    "period": "2016",
+    "customCode": "SVF16",
+    "method": "Postal",
+    "contract": "Del 1",
+    "process": "Nationell gemensam mätning",
+    "implementor": "icquality",
+    "alternativeIdSystem": {
+        "options": [{
+            "name": "KVÅ kod",
+            "choices": [{
+                "name": "SVF huvud- och halscancer",
+                "value": "VA9"
+            }, {
+                "name": "SVF matstrupe- och magsäckscancer",
+                "value": "VB0"
+            }, {
+                "name": "SVF tjock- och ändtarmscancer",
+                "value": "VB2"
+            }, {
+                "name": "SVF levercancer",
+                "value": "VB4"
+            }, {
+                "name": "SVF cancer i gallblåsa och gallgång",
+                "value": "VB5"
+            }, {
+                "name": "SVF cancer i bukspottkörtel och periampullärt",
+                "value": "VB6"
+            }, {
+                "name": "SVF lungcancer",
+                "value": "VC0"
+            }, {
+                "name": "SVF hudmelanom",
+                "value": "VE0"
+            }, {
+                "name": "SVF bröstcancer",
+                "value": "VG9"
+            }, {
+                "name": "SVF äggstockscancer",
+                "value": "VH4"
+            }, {
+                "name": "SVF prostatacancer",
+                "value": "VJ1"
+            }, {
+                "name": "SVF cancer i urinblåsan och urinvägarna",
+                "value": "VK1"
+            }, {
+                "name": "SVF hjärntumör",
+                "value": "VL2"
+            }, {
+                "name": "SVF lymfom",
+                "value": "VN0"
+            }, {
+                "name": "SVF myelom",
+                "value": "VN2"
+            }, {
+                "name": "SVF akut myeloisk leukemi",
+                "value": "VN6"
+            }, {
+                "name": "SVF cancermisstanke vid allvarliga, ospecifika symtom",
+                "value": "VP8"
+            }, {
+                "name": "SVF cancer med okänd primärtumör - CUP",
+                "value": "VP9"
+            }]
+        }],
+        "default": "KVÅ kod",
+        "locked": true
+    },
+    "public": {
+        "isPublished": false,
+        "structure": [{
+            "key": "country",
+            "label": "Land",
+            "dnCode": "c",
+            "labelPlural": "Länder",
+            "choices": ["Sverige"]
+        }, {
+            "key": "rcc",
+            "label": "RCC",
+            "dnCode": "st",
+            "labelPlural": "RCC",
+            "choices": ["RCC Norr", "RCC Stockholm- Gotland", "RCC Syd", "RCC Sydöst", "RCC Uppsala Örebro", "RCC Väst"]
+        }, {
+            "key": "region",
+            "label": "Landsting",
+            "dnCode": "o",
+            "labelPlural": "Landsting",
+            "choices": ["Landstinget Västernorrland", "Norrbottens läns landsting", "Region Jämtland Härjedalen", "Västerbottens läns landsting", "Region Gotland", "Stockholms läns landsting", "Landstinget Blekinge", "Region Halland", "Region Kronoberg", "Region Skåne", "Landstinget i Kalmar län", "Region Jönköpings län", "Region Östergötland", "Landstinget Dalarna", "Landstinget i Uppsala län", "Landstinget i Värmland", "Landstinget Sörmland", "Landstinget Västmanland", "Region Gävleborg", "Region Örebro län", "Västra götalandsregionen"]
+        }, {
+            "key": "svf",
+            "dnCode": "ou",
+            "label": "Vårdförlopp",
+            "labelPlural": "Vårdförlopp",
+            "choices": ["Akut myeloisk leukemi (AML)", "Bröstcancer", "Cancer i bukspottkörtel och periampullärt", "Cancer i gallblåsa och gallgång", "Cancer i urinblåsan och övre urinvägarna", "Cancer med okänd primärtumör (CUP)", "Cancermisstanke vid allvarliga ospecifika symtom", "Hjärntumör", "Hudmelanom", "Huvud- och halscancer", "Levercancer", "Lungcancer", "Lymfom", "Matstrups- och magsäckscancer", "Myelom", "Prostatacancer", "Tjock- och ändtarmscancer", "Äggstockscancer"]
+        }],
+        "dimensions": [
+            "Helhetsintryck",
+            "Emotionellt stöd",
+            "Delaktighet och involvering",
+            "Respekt och bemötande",
+            "Kontinuitet och koordinering",
+            "Information och kunskap",
+            "Tillgänglighet"
+        ],
+        "filters": [{
+            "label": "Kön",
+            "choices": [{
+                "name": "Män",
+                "value": "sex-male",
+                "match": "'respondent.metadata.gender': 'male'"
+            }, {
+                "name": "Kvinnor",
+                "value": "sex-female",
+                "match": "'respondent.metadata.gender': 'female'"
+            }]
+        }]
+    },
+    "responseValidity": {
+        "startDate": "2016-01-01",
+        "endDate": "2016-12-31",
+        "lastModified": "2016-01-26"
+    },
+    "timeline": [{
+        "startDate": "2016-03-01",
+        "endDate": "2016-12-31",
+        "name": "Urvalsperiod",
+        "roles": []
+    }, {
+        "endDate": "2016-03-23",
+        "name": "Avrop",
+        "roles": []
+    }, {
+        "endDate": "2016-03-23",
+        "name": "Mätningsunderlag",
+        "roles": []
+    }, {
+        "startDate": "2016-04-11",
+        "endDate": "2016-04-29",
+        "name": "Möjlighet att genomföra testuppladdningar",
+        "roles": []
+    }, {
+        "endDate": "2016-05-10",
+        "name": "Första uppladdningen av urvalsunderlag, därefter varje månad i enlighet med mätningsanvisningar",
+        "roles": []
+    }, {
+        "endDate": "2016-05-13",
+        "name": "Första utskick, därefter kontinuerilig utskick, tidigast 8v efter start av behandling eller avslutat SVF",
+        "roles": []
+    }, {
+        "endDate": "2016-05-29",
+        "name": "Första resultatåterföringen till landsting/regioner därefter kontinuerligt per kvartal",
+        "roles": []
+    }],
+    "selectionCriterias": [{
+        "api": "maxAmount",
+        "name": "Alla",
+        "description": "Avser alla besök",
+        "volume": {
+            "unlimited": true
+        },
+        "include": "Under 2016 inkluderas samtliga patienter som utreds/utretts enligt standardiserat vårdförlopp med bekräftad välgrundad misstanke urvalet. Detta på grund av att patientunderlaget är relativt litet. Det ska gå åtta veckor från det att patienten avslutat sitt standardiserade vårdförlopp eller gått in i behandling, innan enkät skickas ut. Detta sköter leverantören. Patienter som är 18 år och uppåt ingår i urvalet. Standardiserade vårdförlopp gäller ej personer under 18 år ännu.",
+        "exclude": "Patienten ska inte mer än en gång ingå i urvalet. Då mätningen sker löpande kan det förekomma att en och samma patient mer än en gång kommer med i urvalet därför kommer leverantörens system uppmärksamma om en patient redan ingått i urvalet. Patienter som avlidit exkluderas av leverantören genom Statens personadressregister, SPAR.",
+        "versions": [{
+            "name": "vuxen",
+            "questionnaires": [
+                "Standardiserade vårdförlopp inom cancervård v1.0"
+            ]
+        }]
+    }],
+    "suborderSpecific": [{
+        "api": "signedBy",
+        "name": "Vilken signatur skall finnas i följebrev?",
+        "description": "Namn och titel på personen som skall signera följebrevet till alla enkäter inom region/landsting. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+    }, {
+        "api": "invitations",
+        "name": "Antal inbjudningar för hela landstinget",
+        "input": "number",
+        "description": "Maximalt antal inbjudningar som kommer att skickas ut för hela landstinget, detta förderlas av leverantören"
+    }],
+    "organisationSpecific": [{
+        "api": "managerEmails",
+        "name": "Lista med epost för aktuella verksamhetschefer",
+        "multiple": true,
+        "description": "De tillagda epost-adresserna gällande denna verksamhet kommer att vidarebefodras till enkätleverantören och få tillgång till resultat"
+    }],
+    "organisationInvitation": [{
+        "api": "softName",
+        "name": "Enhetsnamn",
+        "description": "Fullständigt enhetsnamn. Exempelvis 'Kliniken i LillaStaden'. Angivet enhetsnamn används i följebrevet till respondent. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i kallelser/kontakter med patient."
+    }],
+    "organisationMetadata": [{
+        "api": "producer",
+        "name": "Producent",
+        "description": "T.ex.'Landstingsdriven', eller det företag som producerar vården. T.ex.'Privata Vårdföretaget AB'"
+    }, {
+        "api": "throughput",
+        "name": "Genomströmning",
+        "throughputdata": [{
+            "api": "maxAmount",
+            "name": "Genomströmning under föregående mätperiod",
+            "description": "Ange unika läkarbesök för motsvarande månad föregående år. Genomströmning används för att ge förslag på hur många injudningar som bör skicka ut för att få statistiskt säkerställda resultat."
+        }]
+    }, {
+        "api": "doneEdit",
+        "name": "Klar",
+        "description": "Indikerar om editering av aktuell enhet är klar eller inte."
+    }]
+}

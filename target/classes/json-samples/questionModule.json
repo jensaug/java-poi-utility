@@ -1,0 +1,119 @@
+{
+    "name": "questionmodule-sample",
+    "shortName": "qms",
+    "comments": [
+        "Denna frågemodul är ett exempel"
+    ],
+    "tags": [
+        "ex"
+    ],
+    "questions": [
+        {
+            "comparableText": "Skulle du rekommendera ${verksamheten} till vänner och bekanta?",
+            "description": "detta är en fråga",
+            "status": "LEGACY",
+            "dimension": "Delaktighet och involvering",
+            "choiceFreeText": false,
+            "choices": [
+                {
+                    "value": "1",
+                    "weight": -1
+                },
+                {
+                    "value": "2",
+                    "weight": -1
+                },
+                {
+                    "value": "3",
+                    "weight": 0
+                },
+                {
+                    "value": "4",
+                    "weight": 1
+                },
+                {
+                    "value": "5",
+                    "weight": 1
+                },
+                {
+                    "value": "6"
+                }
+            ],
+            "customCodes": [
+                {
+                    "code": "DBNVNA05YNNNA1N000054",
+                    "vendor": "icquality"
+                }
+            ],
+            "comments": [
+                "Denna fråga är väldigt fin",
+                "Jag tycker om denna fråga"
+            ],
+            "tags": [
+                "ex"
+            ]
+        },
+        {
+            "comparableText": "Har du andra synpunkter eller vill utveckla dina svar?",
+            "choiceFreeText": true
+        }
+    ],
+    "languages": [
+        {
+            "language": {
+                "name": "Svenska",
+                "code": "sv_SE"
+            },
+            "variables": [
+                {
+                    "placeholder": "verksamheten",
+                    "description": "Ange vilken typ av enhet som frågan gäller för",
+                    "choices": [
+                        "hälso-/vårdcentralen",
+                        "sjukhuset"
+                    ]
+                }
+            ],
+            "questions": [
+                {
+                    "comparableText": "Skulle du rekommendera ${verksamheten} till vänner och bekanta?",
+                    "text": "Skulle du: rekommendera ${verksamheten} till vänner och bekanta?",
+                    "explanation": "Var god skriv inom rutans ramar, texta tydligt.",
+                    "group": "Skulle du:",
+                    "part": "rekommendera ${verksamheten} till vänner och bekanta?",
+                    "elaboration": {
+                        "text": "Utveckla gärna ditt svar på sista sidan",
+                        "reference": "Har du andra synpunkter eller vill utveckla dina svar?"
+                    },
+                    "choices": [
+                        {
+                            "text": "Nej, inte alls",
+                            "value": "1"
+                        },
+                        {
+                            "value": "2"
+                        },
+                        {
+                            "value": "3"
+                        },
+                        {
+                            "value": "4"
+                        },
+                        {
+                            "text": "Ja, helt och hållet",
+                            "value": "5"
+                        },
+                        {
+                            "text": "Ej aktuellt",
+                            "value": "6"
+                        }
+                    ]
+                },
+                {
+                    "comparableText": "Har du andra synpunkter eller vill utveckla dina svar?",
+                    "text": "Har du andra synpunkter eller vill utveckla dina svar?"
+                }
+            ]
+        }
+    ]
+}

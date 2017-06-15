@@ -1,0 +1,155 @@
+{
+    "measurement": "Primärvård 2015",
+    "dn": "ou=NNV Hammerdals distriktsläkarmottagning,ou=Strömsund,o=Jämtland,c=Sverige",
+    "dimension": "Helhetsintryck",
+    "questions": [ 
+        {
+            "questionText": "Anser du att ditt aktuella behov av vård har blivit tillgodosett?",
+            "choices": [ 
+                {
+                    "text": "Nej, inte alls",
+                    "value": "1",
+                    "answers": 2,
+                    "answersPercentage": 3.63636363636364
+                }, 
+                {
+                    "value": "2",
+                    "answers": 0,
+                    "answersPercentage": 0.0
+                }, 
+                {
+                    "text": "",
+                    "value": "3",
+                    "answers": 5,
+                    "answersPercentage": 9.09090909090909
+                }, 
+                {
+                    "text": "",
+                    "value": "4",
+                    "answers": 6,
+                    "answersPercentage": 10.9090909090909
+                }, 
+                {
+                    "text": "Ja, helt och hållet",
+                    "value": "5",
+                    "answers": 39,
+                    "answersPercentage": 70.9090909090909
+                }, 
+                {
+                    "value": "6",
+                    "text": "Ej aktuellt",
+                    "answers": 3,
+                    "answersPercentage": 5.45454545454545
+                }
+            ],
+            "acceptable": {
+                "count": 52,
+                "trueCount": 45,
+                "falseCount": 7,
+                "truePercentage": 86.5423222325
+            },
+            "respondents": 55,
+            "status": "ok"
+        }, 
+        {
+            "questionText": "Skulle du rekommendera hälso-/vårdcentralen till vänner och bekanta?",
+            "choices": [ 
+                {
+                    "text": "Nej, inte alls",
+                    "value": "1",
+                    "answers": 1,
+                    "answersPercentage": 1.81818181818182
+                }, 
+                {
+                    "value": "2",
+                    "answers": 0,
+                    "answersPercentage": 0.0
+                }, 
+                {
+                    "text": "",
+                    "value": "3",
+                    "answers": 2,
+                    "answersPercentage": 3.63636363636364
+                }, 
+                {
+                    "text": "",
+                    "value": "4",
+                    "answers": 4,
+                    "answersPercentage": 7.27272727272727
+                }, 
+                {
+                    "text": "Ja, helt och hållet",
+                    "value": "5",
+                    "answers": 45,
+                    "answersPercentage": 81.8181818181818
+                }, 
+                {
+                    "value": "6",
+                    "text": "Ej aktuellt",
+                    "answers": 3,
+                    "answersPercentage": 5.45454545454545
+                }
+            ],
+            "acceptable": {
+                "count": 52,
+                "trueCount": 49,
+                "falseCount": 3,
+                "truePercentage": 94.2
+            },
+            "respondents": 55,
+            "status": "ok"
+        }, 
+        {
+            "questionText": "Upplevde du att atmosfären på hälso-/vårdcentralen var bra?",
+            "choices": [ 
+                {
+                    "value": "1",
+                    "text": "Nej, inte alls",
+                    "answers": 0,
+                    "answersPercentage": 0.0
+                }, 
+                {
+                    "value": "2",
+                    "answers": 0,
+                    "answersPercentage": 0.0
+                }, 
+                {
+                    "text": "",
+                    "value": "3",
+                    "answers": 1,
+                    "answersPercentage": 1.81818181818182
+                }, 
+                {
+                    "text": "",
+                    "value": "4",
+                    "answers": 7,
+                    "answersPercentage": 12.7272727272727
+                }, 
+                {
+                    "text": "Ja, helt och hållet",
+                    "value": "5",
+                    "answers": 47,
+                    "answersPercentage": 85.4545454545455
+                }, 
+                {
+                    "value": "6",
+                    "text": "Ej aktuellt",
+                    "answers": 0,
+                    "answersPercentage": 0.0
+                }
+            ],
+            "acceptable": {
+                "count": 55,
+                "trueCount": 54,
+                "falseCount": 1,
+                "truePercentage": 98.2
+            },
+            "respondents": 55,
+            "status": "ok"
+        }
+    ],
+    "aspect": "public",
+    "securityContext": "public",
+    "status": "ok",
+    "filters": "selectionCriteria:Läkarbesök, version:vuxen"
+}

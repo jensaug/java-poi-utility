@@ -1,0 +1,583 @@
+{
+    "_id" : ObjectId("5912bfeb68caf270b845f0b9"),
+    "name" : "Standardiserade vårdförlopp inom cancervård 2016",
+    "views" : [ 
+        {
+            "name" : "SVF Widget for cancercentrum",
+            "value" : "svfwidget",
+            "aspects" : [ 
+                {
+                    "value" : "public",
+                    "name" : "Publik"
+                }
+            ],
+            "published" : {
+                "public" : "1970-01-01T00:00"
+            },
+            "filters" : {
+                "age" : null,
+                "ageGroup" : null,
+                "edu" : null,
+                "rtype" : null,
+                "quarter" : null,
+                "moved" : null
+            },
+            "dimensions" : {
+                "Om patienten" : null
+            }
+        }, 
+        {
+            "value" : "public",
+            "name" : "Publik återföring",
+            "published" : {
+                "public" : "2016-05-12T10:00",
+                "internal" : "2016-05-12T10:00"
+            },
+            "autoGet" : true,
+            "aspects" : [ 
+                {
+                    "value" : "public",
+                    "name" : "Publik"
+                }
+            ],
+            "filterGroups" : {
+                "advancedTop" : null
+            },
+            "filters" : {
+                "age" : null,
+                "ageGroup" : null,
+                "edu" : null,
+                "rtype" : null,
+                "quarter" : null
+            },
+            "dimensions" : {
+                "Om patienten" : null
+            }
+        }, 
+        {
+            "value" : "internal",
+            "name" : "Intern återföring",
+            "published" : {
+                "internal" : "1970-01-01T00:00"
+            },
+            "autoGet" : true,
+            "aspects" : [ 
+                {
+                    "value" : "public",
+                    "name" : "Publik"
+                }
+            ],
+            "filters" : {
+                "kva" : {
+                    "multiSelect" : true
+                }
+            }
+        }
+    ],
+    "dimensions" : [ 
+        {
+            "value" : "Helhetsintryck"
+        }, 
+        {
+            "value" : "Emotionellt stöd"
+        }, 
+        {
+            "value" : "Delaktighet och involvering"
+        }, 
+        {
+            "value" : "Respekt och bemötande"
+        }, 
+        {
+            "value" : "Kontinuitet och koordinering"
+        }, 
+        {
+            "value" : "Information och kunskap"
+        }, 
+        {
+            "value" : "Tillgänglighet"
+        }, 
+        {
+            "value" : "Om patienten",
+            "extra" : true
+        }
+    ],
+    "filterGroups" : [ 
+        {
+            "value" : "organisations",
+            "name" : "Organisationer",
+            "tab" : "Basfilter",
+            "required" : true,
+            "autoSet" : true
+        }, 
+        {
+            "name" : "Filter",
+            "value" : "baseTop",
+            "required" : true,
+            "tab" : "Basfilter"
+        }, 
+        {
+            "name" : "Avancerade filter",
+            "value" : "advancedTop",
+            "required" : true,
+            "tab" : "Avancerade filter"
+        }
+    ],
+    "filters" : [ 
+        {
+            "value" : "kva",
+            "name" : "Vårdförlopp",
+            "filterGroup" : "baseTop",
+            "required" : true,
+            "multiSelect" : false,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "VN6",
+                    "name" : "Akut myeloisk leukemi (AML)",
+                    "match" : "'respondent.metadata.Kategori':'VN6'"
+                }, 
+                {
+                    "value" : "VP8",
+                    "name" : "Allvarliga ospecifika symtom",
+                    "match" : "'respondent.metadata.Kategori':'VP8'"
+                }, 
+                {
+                    "value" : "VG9",
+                    "name" : "Bröstcancer",
+                    "match" : "'respondent.metadata.Kategori':'VG9'"
+                }, 
+                {
+                    "value" : "VB6",
+                    "name" : "Bukspottkörtelcancer",
+                    "match" : "'respondent.metadata.Kategori':'VB6'"
+                }, 
+                {
+                    "value" : "VB5",
+                    "name" : "Gallblåsecancer",
+                    "match" : "'respondent.metadata.Kategori':'VB5'"
+                }, 
+                {
+                    "value" : "VL2",
+                    "name" : "Hjärntumörer",
+                    "match" : "'respondent.metadata.Kategori':'VL2'"
+                }, 
+                {
+                    "value" : "VE0",
+                    "name" : "Hudmelanom",
+                    "match" : "'respondent.metadata.Kategori':'VE0'"
+                }, 
+                {
+                    "value" : "VA9",
+                    "name" : "Huvud- och halscancer",
+                    "match" : "'respondent.metadata.Kategori':'VA9'"
+                }, 
+                {
+                    "value" : "VB4",
+                    "name" : "Levercancer",
+                    "match" : "'respondent.metadata.Kategori':'VB4'"
+                }, 
+                {
+                    "value" : "VC0",
+                    "name" : "Lungcancer",
+                    "match" : "'respondent.metadata.Kategori':'VC0'"
+                }, 
+                {
+                    "value" : "VN0",
+                    "name" : "Lymfom",
+                    "match" : "'respondent.metadata.Kategori':'VN0'"
+                }, 
+                {
+                    "value" : "VB0",
+                    "name" : "Matstrupe- och magsäckscancer",
+                    "match" : "'respondent.metadata.Kategori':'VB0'"
+                }, 
+                {
+                    "value" : "VN2",
+                    "name" : "Myelom",
+                    "match" : "'respondent.metadata.Kategori':'VN2'"
+                }, 
+                {
+                    "value" : "VP9",
+                    "name" : "Okänd primärtumör (CUP)",
+                    "match" : "'respondent.metadata.Kategori':'VP9'"
+                }, 
+                {
+                    "value" : "VJ1",
+                    "name" : "Prostatacancer",
+                    "match" : "'respondent.metadata.Kategori':'VJ1'"
+                }, 
+                {
+                    "value" : "VB2",
+                    "name" : "Tjock- och ändtarmscancer",
+                    "match" : "'respondent.metadata.Kategori':'VB2'"
+                }, 
+                {
+                    "value" : "VK1",
+                    "name" : "Urinblåse- och urinvägsscancer",
+                    "match" : "'respondent.metadata.Kategori':'VK1'"
+                }, 
+                {
+                    "value" : "VH4",
+                    "name" : "Äggstockscancer",
+                    "match" : "'respondent.metadata.Kategori':'VH4'"
+                }
+            ]
+        }, 
+        {
+            "value" : "diagnosis",
+            "name" : "Cancerdiagnos",
+            "filterGroup" : "baseTop",
+            "required" : true,
+            "multiSelect" : false,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "withdiagnosis",
+                    "name" : "Har cancerdiagnos",
+                    "match" : "'respondent.metadata.AvslutSVF': {$exists:false}"
+                }, 
+                {
+                    "value" : "withoutdiagnosis",
+                    "name" : "Utan cancerdiagnos",
+                    "match" : "'respondent.metadata.AvslutSVF': {$exists:true}"
+                }
+            ]
+        }, 
+        {
+            "value" : "organisations",
+            "name" : "Organisation",
+            "filterGroup" : "organisations",
+            "required" : true,
+            "multiSelect" : true,
+            "enrichOptions" : true
+        }, 
+        {
+            "value" : "selectionCriteria",
+            "name" : "Urvalskriterier",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "locked" : {
+                "value" : "Alla",
+                "name" : "Alla"
+            },
+            "options" : [ 
+                {
+                    "value" : "Alla",
+                    "name" : "Alla"
+                }
+            ]
+        }, 
+        {
+            "value" : "version",
+            "name" : "Version",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "locked" : {
+                "value" : "vuxen",
+                "name" : "Vuxen"
+            },
+            "options" : [ 
+                {
+                    "value" : "vuxen",
+                    "name" : "Vuxen"
+                }
+            ]
+        }, 
+        {
+            "value" : "sex",
+            "name" : "Kön",
+            "filterGroup" : "baseTop",
+            "required" : true,
+            "multiSelect" : false,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "male",
+                    "name" : "Män",
+                    "match" : "'respondent.metadata.gender': 'male'"
+                }, 
+                {
+                    "value" : "female",
+                    "name" : "Kvinnor",
+                    "match" : "'respondent.metadata.gender': 'female'"
+                }
+            ]
+        }, 
+        {
+            "value" : "ageGroup",
+            "name" : "Åldersgrupp",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "multiSelect" : true,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "0-4",
+                    "name" : "0-4",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:0}, 'respondent.metadata.ageAtVisit':{$lte:4}"
+                }, 
+                {
+                    "value" : "5-9",
+                    "name" : "5-9",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:5}, 'respondent.metadata.ageAtVisit':{$lte:9}"
+                }, 
+                {
+                    "value" : "10-14",
+                    "name" : "10-14",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:10}, 'respondent.metadata.ageAtVisit':{$lte:14}"
+                }, 
+                {
+                    "value" : "15-19",
+                    "name" : "15-19",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:15}, 'respondent.metadata.ageAtVisit':{$lte:19}"
+                }, 
+                {
+                    "value" : "20-24",
+                    "name" : "20-24",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:20}, 'respondent.metadata.ageAtVisit':{$lte:24}"
+                }, 
+                {
+                    "value" : "25-29",
+                    "name" : "25-29",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:25}, 'respondent.metadata.ageAtVisit':{$lte:29}"
+                }, 
+                {
+                    "value" : "30-34",
+                    "name" : "30-34",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:30}, 'respondent.metadata.ageAtVisit':{$lte:34}"
+                }, 
+                {
+                    "value" : "35-39",
+                    "name" : "35-39",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:35}, 'respondent.metadata.ageAtVisit':{$lte:39}"
+                }, 
+                {
+                    "value" : "40-44",
+                    "name" : "40-44",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:40}, 'respondent.metadata.ageAtVisit':{$lte:44}"
+                }, 
+                {
+                    "value" : "45-49",
+                    "name" : "45-49",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:45}, 'respondent.metadata.ageAtVisit':{$lte:49}"
+                }, 
+                {
+                    "value" : "50-54",
+                    "name" : "50-54",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:50}, 'respondent.metadata.ageAtVisit':{$lte:54}"
+                }, 
+                {
+                    "value" : "55-59",
+                    "name" : "55-59",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:55}, 'respondent.metadata.ageAtVisit':{$lte:59}"
+                }, 
+                {
+                    "value" : "60-64",
+                    "name" : "60-64",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:60}, 'respondent.metadata.ageAtVisit':{$lte:64}"
+                }, 
+                {
+                    "value" : "65-69",
+                    "name" : "65-69",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:65}, 'respondent.metadata.ageAtVisit':{$lte:69}"
+                }, 
+                {
+                    "value" : "70-74",
+                    "name" : "70-74",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:70}, 'respondent.metadata.ageAtVisit':{$lte:74}"
+                }, 
+                {
+                    "value" : "75-79",
+                    "name" : "75-79",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:75}, 'respondent.metadata.ageAtVisit':{$lte:79}"
+                }, 
+                {
+                    "value" : "80-84",
+                    "name" : "80-84",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:80}, 'respondent.metadata.ageAtVisit':{$lte:84}"
+                }, 
+                {
+                    "value" : "85-89",
+                    "name" : "85-89",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:85}, 'respondent.metadata.ageAtVisit':{$lte:89}"
+                }, 
+                {
+                    "value" : "90-94",
+                    "name" : "90-94",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:90}, 'respondent.metadata.ageAtVisit':{$lte:94}"
+                }, 
+                {
+                    "value" : "95-99",
+                    "name" : "95-99",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:95}, 'respondent.metadata.ageAtVisit':{$lte:99}"
+                }, 
+                {
+                    "value" : "100-104",
+                    "name" : "100-104",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:100}, 'respondent.metadata.ageAtVisit':{$lte:104}"
+                }, 
+                {
+                    "value" : "105-109",
+                    "name" : "105-109",
+                    "match" : "'respondent.metadata.ageAtVisit':{$gte:105}, 'respondent.metadata.ageAtVisit':{$lte:109}"
+                }
+            ]
+        }, 
+        {
+            "value" : "quarter",
+            "name" : "Period",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "multiSelect" : true,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "Y16Q2",
+                    "name" : "2016 mars-juni",
+                    "match" : "$or: [{'respondent.metadata.StartBehandling': {$lt: '2016-06-01'}}, {'respondent.metadata.AvslutSVF': {$lt: '2016-06-01'}}]"
+                }, 
+                {
+                    "value" : "Y16Q3",
+                    "name" : "2016 juli-sep",
+                    "match" : "$or: [{$and: [{'respondent.metadata.StartBehandling': {$gte: '2016-06-01'}}, {'respondent.metadata.StartBehandling': {$lt: '2016-09-01'}}]}, {$and: [{'respondent.metadata.AvslutSVF': {$gte: '2016-06-01'}}, {'respondent.metadata.AvslutSVF': {$lt: '2016-09-01'}}]}]"
+                }, 
+                {
+                    "value" : "Y16Q4",
+                    "name" : "2016 okt-dec",
+                    "match" : "$or: [{'respondent.metadata.StartBehandling': {$gte: '2016-09-01'}}, {'respondent.metadata.AvslutSVF': {$gte: '2016-09-01'}}]"
+                }
+            ]
+        }, 
+        {
+            "value" : "rtype",
+            "name" : "Remittenttyp",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "multiSelect" : false,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "pv",
+                    "name" : "Primärvård",
+                    "match" : "'respondent.metadata.Remittenttyp': {$in: ['PV', 'Primarvard']}"
+                }, 
+                {
+                    "value" : "sv",
+                    "name" : "Specialiserad vård",
+                    "match" : "'respondent.metadata.Remittenttyp': {$in: ['SP', 'Specialiserad']}"
+                }, 
+                {
+                    "value" : "missing",
+                    "name" : "Saknas",
+                    "match" : "'respondent.metadata.Remittenttyp': {$exists: false}"
+                }
+            ]
+        }, 
+        {
+            "value" : "edu",
+            "name" : "Utbildningsnivå",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "multiSelect" : false,
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "none",
+                    "name" : "Ingen avslutad utbildning",
+                    "match" : "'responses.choiceText': 'Ingen avslutad utbildning'"
+                }, 
+                {
+                    "value" : "middle",
+                    "name" : "Grundskola, folkskola eller motsvarande",
+                    "match" : "'responses.choiceText': 'Grundskola, folkskola eller motsvarande'"
+                }, 
+                {
+                    "value" : "highschool",
+                    "name" : "Gymnasium, realskola eller motsvarande",
+                    "match" : "'responses.choiceText': 'Gymnasium, realskola eller motsvarande'"
+                }, 
+                {
+                    "value" : "uni",
+                    "name" : "Eftergymnasial utbildning, universitet eller högskola",
+                    "match" : "'responses.choiceText': 'Eftergymnasial utbildning, universitet eller högskola'"
+                }
+            ]
+        }, 
+        {
+            "value" : "moved",
+            "name" : "Överflyttade",
+            "filterGroup" : "advancedTop",
+            "required" : true,
+            "multiSelect" : false,
+            "description" : "Bestämmer hur statistiken för överflyttade \nrespondenter skall hanteras\n* Alla: Repondenter tillhör bägge \nlandsting\n* Invånare: Respondenter tillhör landstingen där de är \nfolkbokförda\n* Patient: Respondenter tillhör landstingen där de fick vård",
+            "options" : [ 
+                {
+                    "name" : "Alla",
+                    "selected" : true
+                }, 
+                {
+                    "value" : "citizen",
+                    "name" : "Invånare",
+                    "match" : "$or: \n[{'respondent.metadata.MottagenFranRegion': {$exists: false}}, \n{duplicate: true}]"
+                }, 
+                {
+                    "value" : "patient",
+                    "name" : "Patient",
+                    "match" : "duplicate: {$exists: false}"
+                }, 
+                {
+                    "value" : "onlyCitizen",
+                    "name" : "Endast invånare",
+                    "match" : "'respondent.metadata.MottagenFranRegion': {$exists: true}, duplicate: true"
+                }, 
+                {
+                    "value" : "onlyPatient",
+                    "name" : "Endast patient",
+                    "match" : "'respondent.metadata.MottagenFranRegion': {$exists: true}, duplicate: \n{$exists: false}"
+                }
+            ]
+        }
+    ],
+    "visibleModules" : [ 
+        {
+            "value" : "Dimensioner - spindelgraf"
+        }, 
+        {
+            "value" : "Dimensioner - stapeldiagram"
+        }, 
+        {
+            "value" : "Dimensioner - tabell"
+        }, 
+        {
+            "value" : "Svarsfrekvens - stapeldiagram"
+        }, 
+        {
+            "value" : "Utskick - stapeldiagram"
+        }, 
+        {
+            "value" : "Supergraf"
+        }
+    ],
+    "questionGroups" : []
+}

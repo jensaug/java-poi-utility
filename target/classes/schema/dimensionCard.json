@@ -1,0 +1,141 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "measurement": {
+            "type": "string"
+        },
+        "securityContext": {
+            "type": "string"
+        },
+        "aspect": {
+            "type": "string"
+        },
+        "dn": {
+            "type": "string"
+        },
+        "hsaId": {
+            "type": "string"
+        },
+        "dimension": {
+            "type": "string"
+        },
+        "filters": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "comment": {
+            "type": "string"
+        },
+        "questions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "questionText": {
+                        "type": "string"
+                    },
+                    "notApplicable": {
+                        "type": "number"
+                    },
+                    "respondents": {
+                        "type": "number"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "comment": {
+                        "type": "string"
+                    },
+                    "trend": {
+                        "type": "number"
+                    },
+                    "choices": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "type": "string"
+                                },
+                                "answers": {
+                                    "type": "integer"
+                                },
+                                "answersPercentage": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "value"
+                            ],
+                            "additionalProperties": false
+                        }
+                    },
+                    "acceptable": {
+                        "type": "object",
+                        "properties": {
+                            "count": {
+                                "type": "integer"
+                            },
+                            "trueCount": {
+                                "type": "integer"
+                            },
+                            "falseCount": {
+                                "type": "integer"
+                            },
+                            "truePercentage": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "count",
+                            "trueCount",
+                            "falseCount",
+                            "truePercentage"
+                        ],
+                        "additionalProperties": false
+                    },
+                    "questionGroupMemberTexts": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "questionText",
+                    "respondents",
+                    "status"
+                ],
+                "oneOf": [
+                    {
+                        "required": ["comment"]
+                    },
+                    {
+                        "required": [
+                            "choices"
+                        ]
+                    }
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "measurement",
+        "aspect",
+        "dn",
+        "dimension",
+        "status",
+        "questions"
+    ],
+    "additionalProperties": false
+}

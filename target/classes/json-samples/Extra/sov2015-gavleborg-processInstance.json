@@ -1,0 +1,15 @@
+{
+    "process": {
+        "name": "Sammanställ mätningsunderlag för postal enkät",
+        "parentState": "Sammanställ mätningsunderlag"
+    },
+    "dn": "o=Landstinget Gävleborg,st=Uppsala-Örebro regionen,c=Sverige",
+    "measurement": {
+        "name": "Somatik öppenvård 2015 Region Gävleborg",
+        "grouping": "Somatik öppenvård",
+        "period": "2015"
+    },
+    "open": "2015-10-01",
+    "close": "2015-10-13",
+    "currentState": "Välj grunddata"
+}

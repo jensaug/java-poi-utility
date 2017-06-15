@@ -1,0 +1,248 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "/",
+  "type": "array",
+  "items": {
+    "id": "0",
+    "type": "object",
+    "properties": {
+      "messageHeader": {
+        "id": "messageHeader",
+        "type": "object",
+        "properties": {
+          "timetamp": {
+            "id": "timetamp",
+            "type": "string"
+          },
+          "nånting": {
+            "id": "nånting",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "timetamp",
+          "nånting"
+        ]
+      },
+      "organisations": {
+        "id": "organisations",
+        "type": "array",
+        "items": {
+          "id": "0",
+          "type": "object",
+          "properties": {
+            "name": {
+              "id": "name",
+              "type": "string"
+            },
+            "hsaId": {
+              "id": "hsaId",
+              "type": "null"
+            },
+            "responserates": {
+              "id": "responserates",
+              "type": "object",
+              "properties": {
+                "sendtotal": {
+                  "id": "sendtotal",
+                  "type": "integer"
+                },
+                "returned": {
+                  "id": "returned",
+                  "type": "integer"
+                },
+                "toill": {
+                  "id": "toill",
+                  "type": "integer"
+                },
+                "deceased": {
+                  "id": "deceased",
+                  "type": "integer"
+                },
+                "langproblem": {
+                  "id": "langproblem",
+                  "type": "integer"
+                },
+                "nofit": {
+                  "id": "nofit",
+                  "type": "integer"
+                },
+                "returnsender": {
+                  "id": "returnsender",
+                  "type": "integer"
+                },
+                "refuse": {
+                  "id": "refuse",
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
+            },
+            "dnList": {
+              "id": "dnList",
+              "type": "array",
+              "items": {
+                "id": "6",
+                "type": "string"
+              },
+              "additionalItems": false
+            },
+            "dn": {
+              "id": "dn",
+              "type": "string"
+            },
+            "indikatorOrgId": {
+              "id": "indikatorOrgId",
+              "type": "integer"
+            },
+            "publicDnList": {
+              "id": "publicDnList",
+              "type": [
+               "array",
+               "null"
+              ],
+              "items": {
+                "id": "3",
+                "type": "string"
+              },
+              "additionalItems": false
+            },
+            "publicDn": {
+              "id": "publicDn",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "surveyResponses": {
+        "id": "surveyResponses",
+        "type": "array",
+        "items": {
+          "id": "0",
+          "type": "object",
+          "properties": {
+            "measurement": {
+              "id": "measurement",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "id": "name",
+                  "type": "string"
+                },
+                "grouping": {
+                  "id": "grouping",
+                  "type": "string"
+                },
+                "period": {
+                  "id": "period",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "organisation": {
+              "id": "organisation",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "id": "name",
+                  "type": "string"
+                },
+                "hsaId": {
+                  "id": "hsaId",
+                  "type": "null"
+                },
+                "dnList": {
+                  "id": "dnList",
+                  "type": "array",
+                  "items": {
+                    "id": "8",
+                    "type": "string"
+                  },
+                  "additionalItems": false
+                },
+                "dn": {
+                  "id": "dn",
+                  "type": "string"
+                },
+                "indikatorOrgId": {
+                  "id": "indikatorOrgId",
+                  "type": "integer"
+                },
+                "publicDnList": {
+                  "id": "publicDnList",
+                  "type": "array",
+                  "items": {
+                    "id": "4",
+                    "type": "string"
+                  },
+                  "additionalItems": false
+                },
+                "publicDn": {
+                  "id": "publicDn",
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "respondent": {
+              "id": "respondent",
+              "type": "string"
+            },
+            "questionResponses": {
+              "id": "questionResponses",
+              "type": "array",
+              "items": {
+                "id": "55",
+                "type": "object",
+                "properties": {
+                  "indikatorId": {
+                    "id": "indikatorId",
+                    "type": "integer"
+                  },
+                  "questionId": {
+                    "id": "questionId",
+                    "type": "string"
+                  },
+                  "answer": {
+                    "id": "answer",
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "additionalItems": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "messageHeader",
+      "organisations",
+      "name",
+      "hsaId",
+      "responserates",
+      "dnList",
+      "dn",
+      "indikatorOrgId",
+      "publicDnList",
+      "publicDn",
+      "surveyResponses",
+      "measurement",
+      "organisation",
+      "respondent",
+      "questionResponses"
+    ]
+  },
+  "additionalItems": false,
+  "required": [
+    "0"
+  ]
+}

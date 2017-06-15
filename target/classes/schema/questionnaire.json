@@ -1,0 +1,223 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "group": {
+            "type": "string"
+        },
+        "customCodes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "vendor": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "code",
+                    "vendor"
+                ]
+            }
+        },
+        "comments": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "tags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "language": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "name",
+                "code"
+            ]
+        },
+        "questions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "explanation": {
+                        "type": "string"
+                    },
+                    "group": {
+                        "type": "string"
+                    },
+                    "part": {
+                        "type": "string"
+                    },
+                    "elaboration": {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "type": "string"
+                            },
+                            "reference": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "text"
+                        ]
+                    },
+                    "choices": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "type": "string"
+                                },
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "required": [
+                                "value"
+                            ]
+                        }
+                    },
+                    "module": {
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "shortName": {
+                                "type": "string"
+                            },
+                            "question": {
+                                "type": "object",
+                                "properties": {
+                                    "comparableText": {
+                                        "type": "string"
+                                    },
+                                    "dimension": {
+                                        "type": "string"
+                                    },
+                                    "choiceFreeText": {
+                                        "type": "boolean"
+                                    },
+                                    "choices": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "value": {
+                                                    "type": "string"
+                                                },
+                                                "weight": {
+                                                    "type": ["number", "null"]
+                                                }
+                                            },
+                                            "additionalProperties": false,
+                                            "required": [
+                                                "value"
+                                            ]
+                                        }
+                                    },
+                                    "customCodes": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "code": {
+                                                    "type": "string"
+                                                },
+                                                "vendor": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "additionalProperties": false,
+                                            "required": [
+                                                "code",
+                                                "vendor"
+                                            ]
+                                        }
+                                    },
+                                    "comments": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "tags": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "additionalProperties": false,
+                                "required": [
+                                    "comparableText"
+                                ],
+                                "anyOf": [
+                                    {
+                                        "required": ["choices"]
+                                    },
+                                    {
+                                        "required": ["choiceFreeText"]
+                                    }
+                                ]
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "name",
+                            "shortName",
+                            "question"
+                        ]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "text",
+                    "module"
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "language",
+        "questions"
+    ]
+}
+
+
+
+
+
+

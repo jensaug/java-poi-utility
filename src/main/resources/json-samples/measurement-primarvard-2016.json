@@ -1,0 +1,347 @@
+{
+  "name": "Primärvård 2016",
+  "grouping": "Primärvård",
+  "period": "2016",
+  "customCode": "PV16",
+  "previousMeasurement": {
+    "name": "Primärvård 2015",
+    "grouping": "Primärvård",
+    "period": "2015"
+  },
+  "method": "Postal",
+  "contract": "Del 1",
+  "process": "Mellanårsmätning",
+  "implementor": "icquality",
+  "public": {
+      "isPublished": false,
+      "structure": [
+        {
+           "key" : "country",
+           "label" : "Land",
+           "labelPlural": "Länder",
+           "choices" : ["Sverige"]
+        },{
+           "key" : "region",
+           "label" : "Landsting/region",
+           "labelPlural" : "Landsting/regioner"
+        },{
+           "key" : "municipality",
+           "label" : "Kommun",
+           "labelPlural" : "Kommuner"
+        },{
+           "key" : "unit",
+           "label" : "Vård-/hälso central",
+           "labelPlural" : "Vård-/hälso central"
+        }
+      ],
+      "dimensions": [
+        "Helhetsintryck",
+        "Emotionellt stöd",
+        "Delaktighet och involvering",
+        "Respekt och bemötande",
+        "Kontinuitet och koordinering",
+        "Information och kunskap",
+        "Tillgänglighet"
+    ],
+    "filters": [
+        {
+            "label": "Kön",
+            "choices": [
+                {
+                "name": "Män",
+                "value": "sex-male",
+                "match": "'respondent.metadata.gender': 'male'"
+                },
+                {
+                "name": "Kvinnor",
+                "value": "sex-female",
+                "match": "'respondent.metadata.gender': 'female'"
+                }
+            ]
+        }
+    ]
+  },
+  "responseValidity": {
+      "startDate": "2016-01-01",
+      "endDate": "2016-12-31",
+      "lastModified": "2016-05-20"
+  },
+
+  "timeline": [
+    {
+      "startDate": "2016-09-01",
+      "endDate": "2016-09-30",
+      "name": "Urvalsperiod",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "endDate": "2016-06-30",
+      "name": "Avrop",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "endDate": "2016-06-30",
+      "name": "Mätningsunderlag",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "startDate": "2016-08-15",
+      "endDate": "2016-08-26",
+      "name": "Testuppladdning av urvalsunderlag",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "endDate": "2016-09-10",
+      "name": "Sista dag att justera mätningsunderlaget i stödstrukturen",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "endDate": "2016-10-17",
+      "name": "Uppladdning av urvalsunderlag",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    },
+    {
+      "startDate": "2016-10-17",
+      "name": "Utskick med inbjudan med enkät påbörjas",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "startDate": "2016-10-17",
+      "endDate": "2016-11-27",
+      "name": "Enkät öppen i 6 veckor",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "endDate": "2016-12-12",
+      "name": "Resultatåterföring fasta svarsalternativ till landsting/region",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "endDate": "2016-12-16",
+      "name": "Resultatåterföring öppna svarsalternativ till landsting/region",
+      "roles": [
+        "admin",
+        "kontaktperson",
+        "enkätleverantör"
+      ]
+    },
+    {
+      "endDate": "2017-01-24",
+      "name": "Resultat publikt tillgängliga",
+      "roles": [
+        "admin",
+        "kontaktperson"
+      ]
+    }
+  ],
+  "selectionCriterias": [
+    {
+      "api": "maxAmountDoctor",
+      "name": "Läkarbesök",
+      "description": "Avser alla besök till läkare",
+      "include": "Alla läkarbesök under urvalsperioden. Samtliga åldrar inkluderade.",
+      "exclude": "Patienter som endast haft telefonkontakt med vården, Patienter utan folkbokföringsadress, Patienter med adress utanför Sverige, Patienter med skyddad identitet, Patienter med reservpersonnummer e x.661212-66DS, Hembesök, Barnavårdscentralsbesök, Mödravårdscentralsbesök, Barnmorskemottagningsbesök",
+      "comment": "",
+      "versions": [
+        {
+          "name": "vuxen",
+          "questionnaires": [
+            "Primärvård Läkarbesök vuxen 2.0",
+            "Primärvård Läkarbesök vuxen inkl. levnadsvanor/tillgänglighet/förtroende/helhet 2.0",
+            "Primärvård Läkarbesök vuxen inkl. levnadsvanor/smärtlindring 2.0",
+            "Primärvård Läkarbesök vuxen inkl. levnadsvanor 2.0",
+            "Primärvård Läkarbesök vuxen inkl. helhet 2.0",
+            "Primärvård Läkarbesök vuxen inkl. förtroende 2.0"
+          ]
+        },
+        {
+          "name": "vårdnadshavare",
+          "comment": "Vårdnadshavarenkät till samtliga patienter under 15 år.",
+          "questionnaires": [
+            "Primärvård Läkarbesök vårdnadshavare 2.0",
+            "Primärvård Läkarbesök vårdnadshavare inkl. helhet 2.0",
+            "Primärvård Läkarbesök vårdnadshavare inkl. smärtlindring 2.0",
+            "Primärvård Läkarbesök vårdnadshavare inkl. förtroende 2.0",
+            "Primärvård Läkarbesök vårdnadshavare inkl. tillgänglighet/förtroende/helhet 2.0"
+          ]
+        }
+      ],
+      "invitationSuggestion" : {
+        "min" : 150,
+        "max" : 500,
+        "interval" : [
+          {
+            "min" : 150,
+            "max" : 399,
+            "number" : 150
+          },
+          {
+            "min" : 400,
+            "max" : 799,
+            "number" : 200
+          },
+          {
+            "min" : 800,
+            "max" : 1199,
+            "number" : 300
+          },
+          {
+            "min" : 1200,
+            "max" : 1800,
+            "number" : 400
+          },
+          {
+            "min" : 1801,
+            "number" : 500
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sjuksköterskebesök",
+      "description": "Avser alla besök till sjuksköterskor",
+      "api": "maxAmountNurse",
+      "optional": true,
+      "include": "Alla besök till sjuksköterskor, Alla åldrar",
+      "exclude": "Hembesök, BVC & MVC/BMM-besök",
+      "comment": "",
+      "versions": [
+        {
+          "name": "vuxen",
+          "questionnaires": [
+            "Primärvård Sjuksköterskebesök vuxen 2.0",
+            "Primärvård Sjuksköterskebesök vuxen inkl. levnadsvanor 2.0",
+            "Primärvård Sjuksköterskebesök vuxen inkl. helhet 2.0",
+            "Primärvård Sjuksköterskebesök vuxen inkl. förtroende 2.0"
+          ]
+        },
+        {
+          "name": "vårdnadshavare",
+          "comment": "Vårdnadshavarenkät till samtliga patienter under 15 år.",
+          "questionnaires": [
+            "Primärvård Sjuksköterskebesök vårdnadshavare 2.0",
+            "Primärvård Sjuksköterskebesök vårdnadshavare inkl. helhet 2.0",
+            "Primärvård Sjuksköterskebesök vårdnadshavare inkl. förtroende 2.0"
+          ]
+        }
+      ],
+      "invitationSuggestion" : {
+        "min" : 150,
+        "max" : 500,
+        "interval" : [
+          {
+            "min" : 150,
+            "max" : 399,
+            "number" : 150
+          },
+          {
+            "min" : 400,
+            "max" : 799,
+            "number" : 200
+          },
+          {
+            "min" : 800,
+            "max" : 1199,
+            "number" : 300
+          },
+          {
+            "min" : 1200,
+            "max" : 1800,
+            "number" : 400
+          },
+          {
+            "min" : 1801,
+            "number" : 500
+          }
+        ]
+      }
+    }
+  ],
+  "suborderSpecific": [
+    {
+      "api": "signedBy",
+      "name": "Vilken signatur skall finnas i följebrev?",
+      "description": "Namn och titel på personen som skall signera följebrevet till alla enkäter inom region/landsting. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+    }
+  ],
+  "organisationSpecific": [
+    {
+      "api": "managerEmails",
+      "name": "Lista med epost för aktuella verksamhetschefer",
+      "multiple": true,
+      "description": "De tillagda epost-adresserna gällande denna verksamhet kommer att vidarebefodras till enkätleverantören och få tillgång till resultat"
+    }
+  ],
+  "organisationInvitation": [
+    {
+      "api": "softName",
+      "name": "Enhetsnamn",
+      "description": "Fullständigt enhetsnamn. Exempelvis 'Vårdcentralen i LillaStaden'. Angivet enhetsnamn används i följebrevet till respondent. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i kallelser/kontakter med patient."
+    }
+  ],
+  "organisationMetadata": [
+    {
+      "api": "producer",
+      "name": "Producent",
+      "description": "T.ex.'Landstingsdriven', eller det företag som producerar vården. T.ex.'Privata Vårdföretaget AB'"
+    },
+    {
+      "api": "throughput",
+      "name": "Genomströmning",
+      "throughputdata": [
+        {
+          "api": "maxAmountDoctor",
+          "name": "Genomströmning för läkarbesök under september 2015",
+          "description": "Ange unika läkarbesök för motsvarande månad föregående år. Genomströmning används för att ge förslag på hur många injudningar som bör skicka ut för att få statistiskt säkerställda resultat."
+        },
+        {
+          "api": "maxAmountNurse",
+          "name": "Genomströmning för sjuksköterskebesök under september 2015",
+          "description": "Ange unika läkarbesök för motsvarande månad föregående år. Genomströmning används för att ge förslag på hur många injudningar som bör skicka ut för att få statistiskt säkerställda resultat."
+        }
+      ]
+    },
+    {
+      "api": "doneEdit",
+      "name": "Klar",
+      "description": "Indikerar om editering av aktuell enhet är klar eller inte."
+    }
+  ],
+  "hsa": {
+      "filter": {
+          "businessClassificationCode": ["1502"],
+          "businessType": "02",
+          "careType": ["01"]
+      }
+  }
+}

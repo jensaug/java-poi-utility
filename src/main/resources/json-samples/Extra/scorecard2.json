@@ -1,0 +1,35 @@
+{
+    "measurement": {
+        "name": "Primärvård 2015"
+    },
+    "name": "adult related",
+    "match": {
+        "questionnaires": ["Primärvård Läkarbesök 2.0"],
+        "questionText": ["Om din familj/vårdnadshavare eller närstående ville prata med en läkare/sjuksköterska, hade de då möjlighet att göra det?"],
+        "choiceValue": "-"
+    },
+    "scores": {
+        "Är du nöjd med de sätt du kan komma i kontakt med hälso-/vårdcentralen på (t ex 1177 Vårdguiden, telefon, e-tjänster, hemsida eller annat)?": {
+            "dimension": "Tillgänglighet",
+            "weight": 2,
+            "choices": {
+                "1": {
+                    "weight": 1,
+                    "outcome": "negative"
+                },
+                "2": {
+                    "outcome": "negative"
+                },
+                "3": {
+                    "outcome": "neutral"
+                },
+                "4": {
+                    "outcome": "positive"
+                },
+                "5": {
+                    "outcome": "positive"
+                }
+            }
+        }
+    }
+}

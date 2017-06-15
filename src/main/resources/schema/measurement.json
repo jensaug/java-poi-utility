@@ -1,0 +1,685 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "naturalKey": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "grouping": {
+                    "type": "string"
+                },
+                "period": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "name",
+                "grouping",
+                "period"
+            ]
+        },
+        "apiProperty": {
+            "type": "object",
+            "properties": {
+                "api": {
+                    "description": "Namn på metadata i API",
+                    "type": "string"
+                },
+                "optional": {
+                    "description": "Om metadata är frivilligt att fylla i",
+                    "type": "boolean"
+                },
+                "name": {
+                    "description": "Namn som presenterar metadata",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "Detaljer om metadata som förtydligar vad hur metadata används",
+                    "type": "string"
+                },
+                "placeholder": {
+                    "description": "Placeholder för inmatningsvärde",
+                    "type": "string"
+                },
+                "group": {
+                    "description": "Om metadata skall grupperas utan namn med föregående metadata",
+                    "type": "boolean"
+                },
+                "input": {
+                    "oneOf": [
+                      {
+                        "enum": [
+                            "checkbox",
+                            "checkbox-multiple",
+                            "date",
+                            "dropdown",
+                            "email",
+                            "number",
+                            "radio",
+                            "text"
+                        ]
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/apiProperty"
+                        }
+                      }
+                    ]
+                },
+                "options": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "title": "Namn",
+                                "type": "string"
+                            },
+                            "value": {
+                                "title": "Värde",
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                },
+                "throughputdata": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "api": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "api",
+                            "name",
+                            "description"
+                        ]
+                    }
+                },
+                "freeText": {
+                    "type": "boolean"
+                },
+                "multiple": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": false,
+            "anyOf": [
+                {
+                    "required": ["api", "name"]
+                },
+                {
+                    "required": ["api", "group"]
+                }
+            ]
+        },
+        "selectionCriteria": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "include": {
+                    "type": "string"
+                },
+                "exclude": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "comment": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string"
+        },
+        "name": {
+            "title": "Mätningsnamn",
+            "type": "string"
+        },
+        "grouping": {
+            "title": "Mätningsgrupp",
+            "description": "Namn på mätningsgrupp",
+            "type": "string"
+        },
+        "period": {
+            "title": "Mätningsgrupp",
+            "description": "Den tidsperiod mätningen utförs",
+            "type": "string"
+        },
+        "APIversion": {
+            "title": "API version",
+            "description": "Vilken API version som skall tillsammans med mätningen",
+            "type": "string"
+        },
+        "customCode": {
+            "title": "Leverantörskod",
+            "description": "Leverantörspecifik kod för mätningen",
+            "type": "string"
+        },
+        "previousMeasurement": {
+            "$ref": "#/definitions/naturalKey"
+        },
+        "process": {
+            "title": "Process",
+            "description": "Vilken mätningsprocess som används",
+            "type": "string"
+        },
+        "method": {
+            "title": "Metod",
+            "description": "Mätningsmetod",
+            "type": "string"
+        },
+        "contract": {
+            "title": "Mätningskontrakt",
+            "type": "string"
+        },
+        "implementor": {
+            "title": "Leverantör",
+            "type": "string"
+        },
+        "noSuborders": {
+            "title": "Inga suborder",
+            "type": "boolean"
+        },
+        "alternativeIdSystem": {
+            "title": "Alternativt id system",
+            "type": "object",
+            "properties": {
+                "default": {
+                    "title": "Standard",
+                    "description": "Ange vilket ID system som är standard",
+                    "type": "string"
+                },
+                "locked": {
+                    "title": "Låst",
+                    "description": "Om användare är låsta till standard id systemet eller inte",
+                    "type": "boolean"
+                }
+            }
+        },
+        "public": {
+            "description": "En publik mätning har detta attribut",
+            "type": "object",
+            "properties": {
+                "noPublicDn": {
+                    "title": "Publik organisationsbeskrivning",
+                    "description": "Om ej en publik organisationsbeskrivning behövs",
+                    "type": "boolean"
+                },
+                "dnConfig": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "structure": {
+                    "description": "Struktur på den publika organisationsbeskrivningen",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "key": {
+                                "title": "Nyckel",
+                                "description": "Nyckel för denna del (a-z)",
+                                "type": "string"
+                            },
+                            "label": {
+                                "title": "Etikett",
+                                "description": "Etikett för denna del",
+                                "type": "string"
+                            },
+                            "dnCode": {
+                                "title": "DN-kod",
+                                "description": "Kod för detta DN-attribut, exempelvis ou, st etc",
+                                "type": "string"
+                            },
+                            "labelPlural": {
+                                "title": "Etikett i plural",
+                                "description": "Etikettnamn i plural",
+                                "type": "string"
+                            },
+                            "choices": {
+                                "title": "Valmöjligheter",
+                                "description": "Vilka val som användaren är begränsad till",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "optional": {
+                                "type": "boolean"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "key",
+                            "label",
+                            "labelPlural"
+                        ]
+                    }
+                },
+                "dimensions": {
+                    "description": "List på dimensioner som ska publiceras",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "filters": {
+                    "title": "Filtreringsmöjligheter",
+                    "description": "Filtreringsmöjligheter som använder parmetern 'filter'",
+                    "type": "array",
+                    "items": {
+                        "title": "Filtergrupp",
+                        "type": "object",
+                        "properties": {
+                            "label": {
+                                "title": "Etikett",
+                                "description": "Etikett för denna grupp av filter",
+                                "type": "string"
+                            },
+                            "choices": {
+                                "description": "Filteralternativ",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "label": {
+                                            "description": "Filterknappens etikett, använder 'namn' om inget är definierat",
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "title": "Namn",
+                                            "description": "Namn på filter, använd gemener a-z",
+                                            "type": "string"
+                                        },
+                                        "value": {
+                                            "title": "Värde",
+                                            "description": "värde som ska skickas till servern",
+                                            "type": "string"
+                                        },
+                                        "match": {
+                                            "title": "Databas matchningsuttryck",
+                                            "description": "Mongo match sträng",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "required": ["name", "value", "match"]
+                                }
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": ["label"]
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "responseValidity": {
+            "title": "Giltighetstid",
+            "description": "För vilken tidsperiod resultaten gäller",
+            "type": "object",
+            "properties": {
+                "startDate": {
+                    "title": "Startdatum",
+                    "type": "string"
+                },
+                "endDate": {
+                    "title": "Slutdatum",
+                    "type": "string"
+                },
+                "lastModified": {
+                    "title": "Senast ändrad",
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "tags": {
+            "title": "Taggar",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "links": {
+            "title": "Länkar",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Namn",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "Beskrivning",
+                        "type": "string"
+                    },
+                    "link": {
+                        "title": "Länk",
+                        "type": "string"
+                    },
+                    "role": {
+                        "title": "Roller",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "timeline": {
+            "title": "Tidslinje",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "tag": {
+                        "title": "Etikett",
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "title": "Startdatum",
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "title": "Slutdatum",
+                        "type": "string"
+                    },
+                    "name": {
+                        "title": "Namn",
+                        "type": "string"
+                    },
+                    "roles": {
+                        "title": "Roller",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "selectionCriterias": {
+            "title": "Urvalskriterier",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "allOf": [{
+                        "$ref": "#/definitions/selectionCriteria"
+                    }, {
+                        "properties": {
+                            "api": {
+                                "title": "API namn för ulvalskriterie",
+                                "type": "string"
+                            },
+                            "optional": {
+                                "title": "Valfri",
+                                "description": "Om deltagande kan välja att avstå detta urvalskriterie",
+                                "type": "boolean"
+                            },
+                            "volume": {
+                                "title": "Volymer i inbjudan",
+                                "type": "object",
+                                "properties": {
+                                    "unlimited": {
+                                        "title": "Obegränsat",
+                                        "description": "Om antalet inbjudningar ska vara obegränsat",
+                                        "type": "boolean"
+                                    },
+                                    "max": {
+                                        "title": "Max",
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "versions": {
+                                "title": "Versioner",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "allOf": [{
+                                            "$ref": "#/definitions/selectionCriteria"
+                                        }, {
+                                            "properties": {
+                                                "questionnaires": {
+                                                    "title": "Enkäter",
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }],
+                                    "properties": {
+                                        "name": {},
+                                        "include": {},
+                                        "exclude": {},
+                                        "description": {},
+                                        "comment": {},
+                                        "questionnaires": {}
+                                    },
+                                    "additionalProperties": false,
+                                    "required": [
+                                        "name",
+                                        "questionnaires"
+                                    ]
+                                }
+                            }
+                        }
+                    }],
+                "properties": {
+                    "name": {},
+                    "include": {},
+                    "exclude": {},
+                    "description": {},
+                    "comment": {},
+                    "api": {},
+                    "optional": {},
+                    "volume": {},
+                    "versions": {},
+                    "invitationSuggestion": {
+                        "title": "Utskicksförslag",
+                        "type": "object",
+                        "properties": {
+                            "min": {
+                                "title": "Lägsta förslag",
+                                "type": "number"
+                            },
+                            "max": {
+                                "title": "Högsta förslag",
+                                "type": "number"
+                            },
+                            "factor": {
+                                "title": "Faktor",
+                                "description": "Relation mellan genomströmning och utskicksförslag",
+                                "type": "number"
+                            },
+                            "interval": {
+                                "title": "Intervall",
+                                "description": "Lista med interval och vilka mängder utskicksförslag de ska resultera i",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "min": {
+                                            "title": "Start",
+                                            "type": "number"
+                                        },
+                                        "max": {
+                                            "title": "Slut",
+                                            "type": "number"
+                                        },
+                                        "number": {
+                                            "title": "Antal i förslag",
+                                            "type": "number"
+                                        }
+                                    },
+                                    "required": [
+                                        "number"
+                                    ],
+                                    "anyOf": [{
+                                            "required": ["min"]
+                                        }, {
+                                            "required": ["max"]
+                                        }],
+                                    "additionalProperties": false
+                                }
+                            }
+                        },
+                        "additionalProperties": false,
+                        "anyOf": [{
+                                "required": ["interval"]
+                            }, {
+                                "required": ["factor"]
+                            }, {
+                                "required": ["min"]
+                            }, {
+                                "required": ["max"]
+                            }]
+                    }
+                },
+                "additionalProperties": false,
+                "required": [
+                    "name",
+                    "api",
+                    "versions"
+                ]
+            }
+        },
+        "respondent": {
+            "type": "object",
+            "properties": {
+                "metadata": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "suborderSpecific": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/apiProperty"
+            }
+        },
+        "organisationSpecific": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/apiProperty"
+            }
+        },
+        "organisationInvitation": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/apiProperty"
+            }
+        },
+        "organisationMetadata": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/apiProperty"
+            }
+        },
+        "hsa": {
+            "type": "object"
+        },
+        "questionSelection": {
+            "type": "object",
+            "properties": {
+                "baseModules": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "questions": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "name"
+                        ]
+                    }
+                },
+                "extraModules": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "disableCherryPick": {
+                                "type": "boolean"
+                            },
+                            "questions": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                            "name"
+                        ]
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "required": [
+                "baseModules",
+                "extraModules"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "grouping",
+        "period",
+        "timeline",
+        "selectionCriterias",
+        "suborderSpecific",
+        "organisationSpecific",
+        "organisationMetadata",
+        "organisationInvitation"
+    ]
+}

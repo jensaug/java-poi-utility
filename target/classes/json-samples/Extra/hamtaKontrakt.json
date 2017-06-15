@@ -1,0 +1,246 @@
+
+{ 
+    "measurement": {
+        "name": "Primärvård läkare höst 2014",
+        "grouping": "Primärvård läkare",
+        "period": "2014",
+        "links": [
+            {
+                "name": "Primärvård 2014",
+                "description": "Information till invåndare om mätning, vilket beskriver metod, urval etc",
+                "link": "http://joelscms.acme.com/",
+                "role": ["kontaktperson", "enkätleverantör", "invånare"]
+            },  
+            {
+                "name": "Vårdenheter i Primärvård 2014",
+                "description": "Information till deltagande organisationsenheter om mätning",
+                "link": "http://joelscms.acme.com/",
+                "role": ["kontaktperson", "enkätleverantör", "invånare"]
+            },  
+            {
+                "name": "Urval Primärvård 2014",
+                "description": "Information till kontaktpersoner om mätning",
+                "link": "http://joelscms.acme.com/",
+                "role": ["kontaktperson", "enkätleverantör"]
+            },
+            {
+                "name": "Fileöverföring Primärvård 2014",
+                "description": "Information till kontaktpersoner om mätning",
+                "link": "http://joelscms.acme.com/",
+                "role": ["kontaktperson", "enkätleverantör"]
+            },
+            {
+                "name": "Deltagande i Primärvård 2014",
+                "description": "Information till patienter om mätningen",
+                "link": "http://joelscms.acme.com/",
+                "role": ["kontaktperson", "enkätleverantör", "invånare"]
+            }
+        ],
+        "selectionCriterias": [
+            {
+                "name": "Läkarbesök",
+                "api": "maxAmountDoctor",
+                "include": "Alla besök till läkare, alla åldrar",
+                "exclude": "Hembesök, BVC & MVC/BMM-besök",
+                "comment": "",
+                "versions": [
+                    {
+                        "name": "Vuxna",
+                        "include": "Över 15 år",
+                        "questionnaire": { "name": "Primärvård läkare v1.0" }
+                    },
+                    {
+                        "name": "Barn",
+                        "include": "Under 15 år",
+                        "description": "Barnversion av enkäten riktad till barnet och målsman, ställd till målsman i utskicket",
+                        "questionnaire": { "name": "Primärvård läkare barn v1.0"}
+                    }                   
+                ]
+            },
+            {
+                "name": "Sjuksöterskebesök",
+                "api": "maxAmountNurse",
+                "include": "Alla besök till sjuksköterskemottagning inom urvalsperioden, alla åldrar",
+                "exclude": "",
+                "comment": "",
+                "optional": true,
+                "versions": [
+                    {
+                        "name": "Vuxna",
+                        "include": "Över 15 år",
+                        "questionnairePrefix": "Primärvård sjuksköterska"
+                    },
+                    {
+                        "name": "Barn",
+                        "include": "Under 15 år",
+                        "description": "Barnversion av enkäten riktad till barnet och målsman, ställd till målsman i utskicket",
+                        "questionnairePrefix": "Primärvård sjuksköterska barn"
+                    }                   
+                ]
+            }
+		],
+        "suborderSpecific": [           
+            {
+                "api": "comments",
+                "name": "Kommentarer enkätleverantör",
+                "description": "De tillagda kommentarerna kommer att vidarebefodras till enkätleverantören",
+                "role": ["admin", "kontaktperson", "enkätleverantör"]
+            }            
+        ],         
+        "organisationSpecific": [           
+            {
+                "api": "producer",
+                "name": "Producent",
+                "description": "T.ex. 'Landstingsdriven', eller det företag som producerar vården t.ex. 'Privata Vårdföretaget AB'"
+            },
+            {
+                "api": "change",
+                "name": "Förändring sedan föregående mätning",
+                "description": "Fylls endast i om enhetens namn eller dess organisatoriska tillhörighet/driftsform har ändrats sedan tidigare mätning. Informationen är viktig för att veta om resultaten för enheten skall kunna jämföras med tidigare mätningar eller inte. "
+            
+            },     
+            {
+                "api": "alternativeId",
+                "name": "Registerkod",
+                "description": "Den kod som används vid registeruttaget t.ex PASIS eller komkod",                
+                "optional": true
+            },
+            {
+                "api": "hsaId",
+                "name": "HSA-ID",
+                "optional": true
+            },
+            {
+                "api": "comments",
+                "name": "Kommentarer enkätleverantör",
+                "description": "De tillagda kommentarerna kommer att vidarebefodras till enkätleverantören",
+                "role": ["kontaktperson", "enkätleverantör"]
+            }             
+        ],        
+        "organisationInvitation": [
+            {
+                "api": "softName",
+                "name": "Enhetsnamn",
+                "description": "Fullständigt enhetsnamn. Exempelvis 'Vårdcentralen i Lilla Staden'. Angivet enhetsnamn används i följebrevet till respondent. Tänk på att använda det namn som respondenten känner till, t.ex. namnet som används i era kallelser/kontakter med patient."
+            },                                                                                                    
+            {
+                "api": "timeSelection",
+                "type": "timeline",
+                "name": "Datum för urval",
+                "description": "Urvalsperioden är vecka 36-39 alternativt september 2014. Ange den urvalsperiod som gäller för landstinget/regionen."
+            },                                
+            {
+                "api": "timeNameDelivery",
+                "type": "timeline",
+                "name": "Datum för namnleverans",
+                "description": "Datum för leverans av namn. Leverans bör ske i så snar anslutning till urvalsperioden som möjlig"
+            
+            },                                                               
+            {
+                "api": "signedBy",
+                "name": "Signatur",
+                "description": "Namn och titel på personen som skall signera följebrevet. Namn och titel anges i formen 'Förnamn Efternamn, Titel'"
+            }
+        ],
+        "organisationMetadata": [
+            {
+                "api": "producer",
+                "name": "Producent",
+                "description": "T.ex. 'Landstingsdriven', eller det företag som producerar vården t.ex. 'Privata Vårdföretaget AB'"
+            }
+        ],    
+        "timeline": [
+            {
+                "startDate": "2015-01-01",
+                "name": "Mätning initieras",
+                "roles": ["admin, kontaktperson"]
+            },
+            {
+                "startDate": "2015-02-01",
+                "endDate": "2015-03-01",
+                "name": "Period för kontaktpersoner avrop",
+                "roles": ["admin, kontaktperson"]                
+            },
+            {
+                "startDate": "2015-04-01",
+                "name": "Enkätleverantör kan hämta mätkontrakt",
+                "roles": ["admin, kontaktperson", "enkätleverantör"]            
+            },
+            {
+                "startDate": "2015-05.01",
+                "endDate": "2015-06-01",
+                "name": "Period för enkätens genomförande",
+                "roles": ["admin, kontaktperson", "enkätleverantör"]                
+            },
+            {
+                "startDate": "2015-07-01",
+                "name": "Mätning publiceras",
+                "roles": ["admin, kontaktperson"]                
+            }
+        ]
+    },
+    "questionnaires": [
+        {
+            "selection": "Läkarbesök",
+            "version": "vuxna",
+            "name": "Primärvård läkare VGR v1.0",                    
+            "questions": [ "questionreferans(ObjectId) så detta hämtas med extraqueries när man hämtar ut den" ]
+        },
+        {
+            "selection": "Läkarbesök",                    
+            "version": "barn",
+            "name": "Primärvård läkare barn VGR v1.0",
+            "questions": [ "questionreferans(ObjectId) så detta hämtas med extraqueries när man hämtar ut den" ]
+        },                
+        {
+            "selection": "Läkarbesök",
+            "version": "vuxna",
+            "name": "Primärvård läkare VGR Sahlgrenska v1.0",
+            "dn": "dnfördenorgenhetsomformuläretgälleromintednangesärdetettbaseform)",
+            "questions": [ "questionreferans(ObjectId)sådettahämtasmedextraqueriesnärmanhämtarutden"]
+        }
+    ],    
+    "suborders": [
+        {
+            "measurementName": "Primärvård läkare höst 2014",
+            "grouping": "Primärvård läkare",
+            "period": "2014",            
+            "dn": "ou=Närhälsan,o=Västra Götalandsregionen,l=Västra Götalands län,c=SE",
+
+            "created": "2015-01-01",
+            "creatorEmail": "någon@vgr.se",
+            "creatorHsaId": "SE2321000131-U0",            
+
+            "specific": {
+                "comments": ["Vi var inte med förra året", "Privatiserades 2014"]
+            },
+            "organisations": [ 
+                {
+                    "dn": "ou=Närhälsan Sörhaga vårdcentral,ou=Område V6,ou=Närhälsan,o=Västra Götalandsregionen,l=Västra Götalands län,c=SE",
+                    "specific": {
+                        "hsaId": "SE2321000131-E000000000433",    
+                        "alternateId": "12345",                                        
+                        "managerEmails": ["john@doe.com"],         
+                        "change": ""
+                    },
+                    "invitation": {                      
+                        "softName": "Närhälsan Sörhaga vårdcentral",
+                        "signedBy": "John Doe, överläkare",
+                        "timeSelection": {
+                            "startDate": "2015-05-01",
+                            "endDate": "3015-06-01"
+                        },
+                        "timeNameDelivery": {
+                            "endDate": "2015-07-01"
+                        },
+                        "maxAmountDoctor": 100,
+                        "maxAmountNurse" : 0                        
+                    },
+                    "metadata": {
+                        "producer": "landstingsdriven"                        
+                    }
+                }
+            ]
+        }
+    ]
+}

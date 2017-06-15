@@ -1,0 +1,174 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://patientenkat.se/gss-api/schemas/surveyResponse#",
+    "type": "object",
+    "properties": {
+        "batchId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$"
+        },
+        "clientId": {
+            "type": "string"
+        },
+        "implementor": {
+            "title": "Leverantör",
+            "type": "string"
+        },
+        "measurement": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "grouping": {
+                    "type": "string"
+                },
+                "period": {
+                    "type": "string"
+                },
+                "period": {
+                    "type": "string"
+                },
+                "customCode": {
+                    "type": "string"
+                }                
+            },
+            "additionalProperties": false,
+            "required": ["name"]
+        },
+        "respondent": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": ["string", "integer"]
+                },
+                "status": {
+                    "type": "string"
+                },
+                "metadata": {
+                    "type": "object",
+                    "properties": {
+                        "ageAtVisit": {
+                            "id": "ageAtVisit",
+                            "type": "integer"
+                        },
+                        "postalCode": {
+                            "id": "gender",
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "required": ["id", "status"]            
+        },
+        "questionnaire": {
+            "type": "object",          
+            "anyOf": [
+                {
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["name"]
+                },
+                {
+                    "properties": {
+                        "customCode": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["customCode"]
+                }
+            ]
+        },
+        "organisation": {
+            "type": "object",
+            "properties": {
+                "dn": {
+                    "type": "string"
+                },
+                "publicDn": {
+                    "type": "string"
+                },
+                "hsaId": {
+                    "type": "string"
+                },
+                "alternativeId": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false,
+            "required": ["dn"]
+        },
+        "responses": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "questionText": {
+                        "type": "string"
+                    },
+                    "choiceValue": {
+                        "type": "string"
+                    },                    
+                    "choiceText": {
+                        "type": "string"
+                    },
+                    "customChoiceText": {
+                        "type": "string"
+                    },
+                    "choiceAcceptable": {
+                        "type": "boolean"
+                    },
+                    "questionWeight": {
+                        "type": "number"
+                    },
+                    "questionDimension": {
+                        "type": "string"
+                    },                    
+                    "customCode": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["questionText", "choiceValue"]
+            },
+            "additionalItems": false
+        },
+        "scores": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "number"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "weight": {
+                        "type": "number"
+                    }
+                },
+                "additionalProperties": false,
+                "required": ["name", "value"]
+            },
+            "additionalItems": false
+        },
+        "duplicate": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "measurement",
+        "respondent",
+        "questionnaire",
+        "organisation"
+    ]
+}
